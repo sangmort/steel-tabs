@@ -26,4 +26,8 @@ body {
   background-color: #101820;
   color: #FFB612;
   font-size: 20px;
+}
+
+strong {
+  font-weight: bolder;
 }/*# sourceMappingURL=main.css.map */
