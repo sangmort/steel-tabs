@@ -18,7 +18,7 @@ let tomlinism = [
   "Excuses are tools of the incompetent",
   "We’re not urinating on the fire, man.",
   "The strength of the pack is the pack.",
-  "People aren't very good listeners, by nature. Part of being a good communicator is recognizing and understanding that and trying to make the complex simple. I try to capture a concept, an idea or a moment in a few words. If they remember it, job done."
+  "People aren't very good listeners, by nature. Part of being a good communicator is recognizing and understanding that and trying to make the complex simple. I try to capture a concept, an idea or a moment in a few words. If they remember it, job done.",
   "It’s not what you’re capable of, but it’s about what you’re willing to do. We put our expectations based on our capabilities. <br>And, really, we should put our expectations based on performance, based on the work we put in. <br>It applies to football, but it applies to every component of life. ",
 ];
 
