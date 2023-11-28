@@ -14,8 +14,8 @@ function selectRandomItemFrom(array) {
 
 // Selects toliminism, applies randomizer, injects into the page
 function tomlinismGenerator() {
-  let callOut = selectRandomItemFrom(tomlinism);
-  document.getElementById("callOut").innerHTML = '"' + callOut + '"';
+  let randomTomlinQuote = selectRandomItemFrom(tomlinism);
+  document.getElementById("tomlinism-quote").innerHTML = '"' + randomTomlinQuote + '"';
 }
 
 tomlinismGenerator();
