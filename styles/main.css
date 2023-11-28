@@ -46,12 +46,12 @@ strong {
 }
 .tomlinism-quote-container p {
   font-size: 5rem;
-  width: 80rem;
+  width: 66dvw;
 }
 
 #content-wrapper {
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 6fr 1fr;
   grid-template-rows: 1.5fr repeat(2, 1fr) 3fr repeat(2, 1fr) 1.5fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
