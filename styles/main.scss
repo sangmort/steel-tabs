@@ -1,5 +1,21 @@
-$red: #ff0000;
+$gold: #FFB612;
+$black: #101820;
+$red: #C60C30;
+$blue: #003087;
+$silver: #A5ACAF;
+
+$h1-size: 3rem;
+$p-size: 20px;
+
+// Generate headings sizes
+@for $i from 1 through 6 {
+    h#{$i} {
+      font-size: $h1-size - 0.35rem * ($i - 1);
+    }
+  }
 
 body {
-    background-color: $red;
+    background-color: $black;
+    color: $gold;
+    font-size: $p-size;
 }
