@@ -26,6 +26,18 @@ strong {
   font-weight: bolder;
 }
 
+.tomlinism-quote-container {
+  display: flex;
+  text-align: center;
+  height: 100dvh;
+  z-index: 1000;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  width: 100dvw;
+  flex-direction: column;
+}
+
 @mixin stripe-styles($height, $width) {
   height: $height;
   width: $width;
@@ -43,11 +55,6 @@ strong {
   justify-items: center;
   width: 100dvw;
   height: 100dvh;
-
-  .tomlinism-quote-container {
-    grid-area: 4 / 2 / 5 / 3;
-    text-align: center;
-  }
 
   .stripe1-left,
   .stripe1-right {
