@@ -7,7 +7,15 @@ let tomlinism = [
   "Can’t do ordinary things and expect unique results.",
 ];
 
-// Random generator
+// Randomizer
 function selectRandomItemFrom(array) {
   return array[Math.floor(Math.random() * array.length)];
 }
+
+// Selects toliminism, applies randomizer, injects into the page
+function tomlinismGenerator() {
+  let callOut = selectRandomItemFrom(tomlinism);
+  document.getElementById("callOut").innerHTML = '"' + callOut + '"';
+}
+
+tomlinismGenerator();
