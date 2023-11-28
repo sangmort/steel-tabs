@@ -47,6 +47,10 @@ strong {
 .tomlinism-quote-container p {
   font-size: 5rem;
   width: 66dvw;
+  margin-bottom: 1rem;
+}
+.tomlinism-quote-container .shrink-text {
+  font-size: 3.5rem;
 }
 .tomlinism-quote-container h1 {
   display: none;
