@@ -3,6 +3,7 @@ $black: #101820;
 $red: #c60c30;
 $blue: #003087;
 $silver: #a5acaf;
+$white: #efefef;
 
 $h1-size: 3rem;
 $p-size: 20px;
@@ -25,6 +26,11 @@ strong {
   font-weight: bolder;
 }
 
+@mixin stripe-styles {
+  height: 100%;
+  width: 100%;
+}
+
 #content-wrapper {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
@@ -37,38 +43,74 @@ strong {
   justify-items: center;
   width: 100dvw;
   height: 100dvh;
-}
 
-.tomlinism-quote-container {
-  grid-area: 4 / 2 / 5 / 3;
-}
-.stripe1-left {
-  grid-area: 2 / 1 / 3 / 2;
-}
-.stripe1-right {
-  grid-area: 2 / 3 / 3 / 4;
-}
-.stripe2-left {
-  grid-area: 3 / 1 / 4 / 2;
-}
-.stripe2-right {
-  grid-area: 3 / 3 / 4 / 4;
-}
-.stripe3-left {
-  grid-area: 4 / 1 / 5 / 2;
-}
-.stripe3-right {
-  grid-area: 4 / 3 / 5 / 4;
-}
-.stripe4-left {
-  grid-area: 5 / 1 / 6 / 2;
-}
-.stripe4-right {
-  grid-area: 5 / 3 / 6 / 4;
-}
-.stripe5-left {
-  grid-area: 6 / 1 / 7 / 2;
-}
-.stripe5-right {
-  grid-area: 6 / 3 / 7 / 4;
+  .tomlinism-quote-container {
+    grid-area: 4 / 2 / 5 / 3;
+  }
+
+  .stripe1-left,
+  .stripe1-right {
+    @include stripe-styles;
+    background-color: $gold;
+  }
+
+  .stripe1-left {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+
+  .stripe1-right {
+    grid-area: 2 / 3 / 3 / 4;
+  }
+
+  .stripe2-left,
+  .stripe2-right {
+    @include stripe-styles;
+    background-color: $white;
+    border-top: 1rem solid $black;
+    border-bottom: 1rem solid $black;
+  }
+
+  .stripe2-left {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+
+  .stripe2-right {
+    grid-area: 3 / 3 / 4 / 4;
+  }
+
+  .stripe3-left,
+  .stripe3-right {
+    @include stripe-styles;
+    background-color: $gold;
+  }
+  .stripe3-left {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+  .stripe3-right {
+    grid-area: 4 / 3 / 5 / 4;
+  }
+  .stripe4-left,
+  .stripe4-right {
+    @include stripe-styles;
+    background-color: $white;
+    border-top: 1rem solid $black;
+    border-bottom: 1rem solid $black;
+  }
+  .stripe4-left {
+    grid-area: 5 / 1 / 6 / 2;
+  }
+  .stripe4-right {
+    grid-area: 5 / 3 / 6 / 4;
+  }
+  .stripe5-left,
+  .stripe5-right {
+    @include stripe-styles;
+    background-color: $gold;
+  }
+  .stripe5-left {
+    grid-area: 6 / 1 / 7 / 2;
+  }
+  .stripe5-right {
+    grid-area: 6 / 3 / 7 / 4;
+  }
 }
