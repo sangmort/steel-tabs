@@ -48,6 +48,9 @@ strong {
   font-size: 5rem;
   width: 66dvw;
 }
+.tomlinism-quote-container h1 {
+  display: none;
+}
 
 #content-wrapper {
   display: grid;

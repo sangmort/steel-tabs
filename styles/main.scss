@@ -41,6 +41,10 @@ strong {
     font-size: 5rem;
     width: 66dvw;
 }
+
+    h1 {
+        display: none;
+    }
 }
 
 @mixin stripe-styles($height, $width) {
