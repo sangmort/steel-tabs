@@ -13,7 +13,7 @@
       },
       "content_scripts":
         {
-          "css": ["style.css"],
+          "css": ["reset.css","style.css"],
           "js": ["script.js"]
         }
   }
