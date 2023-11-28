@@ -26,9 +26,9 @@ strong {
   font-weight: bolder;
 }
 
-@mixin stripe-styles {
-  height: 100%;
-  width: 100%;
+@mixin stripe-styles($height, $width) {
+  height: $height;
+  width: $width;
 }
 
 #content-wrapper {
@@ -46,12 +46,15 @@ strong {
 
   .tomlinism-quote-container {
     grid-area: 4 / 2 / 5 / 3;
+    text-align: center;
   }
 
   .stripe1-left,
   .stripe1-right {
-    @include stripe-styles;
+    @include stripe-styles(100%, 130%);
     background-color: $gold;
+    border-top: 1rem solid $black;
+    border-bottom: 1rem solid $black;
   }
 
   .stripe1-left {
@@ -64,9 +67,8 @@ strong {
 
   .stripe2-left,
   .stripe2-right {
-    @include stripe-styles;
+    @include stripe-styles(100%, 110%);
     background-color: $white;
-    border-top: 1rem solid $black;
     border-bottom: 1rem solid $black;
   }
 
@@ -80,7 +82,7 @@ strong {
 
   .stripe3-left,
   .stripe3-right {
-    @include stripe-styles;
+    @include stripe-styles(100%, 150%);
     background-color: $gold;
   }
   .stripe3-left {
@@ -91,7 +93,7 @@ strong {
   }
   .stripe4-left,
   .stripe4-right {
-    @include stripe-styles;
+    @include stripe-styles(100%, 110%);
     background-color: $white;
     border-top: 1rem solid $black;
     border-bottom: 1rem solid $black;
@@ -104,8 +106,9 @@ strong {
   }
   .stripe5-left,
   .stripe5-right {
-    @include stripe-styles;
+    @include stripe-styles(100%, 130%);
     background-color: $gold;
+    border-bottom: 1rem solid $black;
   }
   .stripe5-left {
     grid-area: 6 / 1 / 7 / 2;
