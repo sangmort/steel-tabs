@@ -36,6 +36,11 @@ strong {
   justify-content: center;
   width: 100dvw;
   flex-direction: column;
+
+  p {
+    font-size: 5rem;
+    width: 80rem;
+}
 }
 
 @mixin stripe-styles($height, $width) {

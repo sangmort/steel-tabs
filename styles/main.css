@@ -44,6 +44,10 @@ strong {
   width: 100dvw;
   flex-direction: column;
 }
+.tomlinism-quote-container p {
+  font-size: 5rem;
+  width: 80rem;
+}
 
 #content-wrapper {
   display: grid;
