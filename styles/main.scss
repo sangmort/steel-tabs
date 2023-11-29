@@ -1,3 +1,4 @@
+
 $gold: #ffb612;
 $black: #101820;
 $red: #c60c30;
@@ -8,6 +9,36 @@ $white: #efefef;
 $h1-size: 3rem;
 $p-size: 20px;
 
+
+$themes: (
+  home: (
+    background-color: $black,
+    color: $white,
+  ),
+  away: (
+    background-color: $white,
+    color: $black,
+  ),
+  color-rush: (
+    background-color: $black,
+    color: $gold,
+  ),
+  // Add more themes here...
+);
+
+@each $theme, $map in $themes {
+  .theme-#{$theme} {
+    @each $key, $value in $map {
+      --#{$key}: #{inspect($value)};
+    }
+  }
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--color);
+}
+
 // Generate headings sizes
 @for $i from 1 through 6 {
   h#{$i} {
@@ -15,12 +46,12 @@ $p-size: 20px;
   }
 }
 
-body {
-  background-color: $black;
-  color: $gold;
-  font-size: $p-size;
-  overflow: hidden;
-}
+// body {
+//   background-color: $background-color;
+//   color: $text-color;
+//   font-size: $p-size;
+//   overflow: hidden;
+// }
 
 strong {
   font-weight: bolder;
@@ -41,6 +72,7 @@ strong {
     font-size: 5rem;
     width: 66dvw;
     margin-bottom: 1rem;
+    color: var(--color);
 }
 
 

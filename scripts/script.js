@@ -26,3 +26,7 @@ async function tomlinismGenerator() {
 }
 
 tomlinismGenerator();
+
+document.querySelector('#theme-select').addEventListener('change', function(e) {
+  document.body.className = 'theme-' + e.target.value;
+});

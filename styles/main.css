@@ -1,3 +1,23 @@
+.theme-home {
+  --background-color: #101820;
+  --color: #efefef;
+}
+
+.theme-away {
+  --background-color: #efefef;
+  --color: #101820;
+}
+
+.theme-color-rush {
+  --background-color: #101820;
+  --color: #ffb612;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--color);
+}
+
 h1 {
   font-size: 3rem;
 }
@@ -22,13 +42,6 @@ h6 {
   font-size: 1.25rem;
 }
 
-body {
-  background-color: #101820;
-  color: #ffb612;
-  font-size: 20px;
-  overflow: hidden;
-}
-
 strong {
   font-weight: bolder;
 }
@@ -48,6 +61,7 @@ strong {
   font-size: 5rem;
   width: 66dvw;
   margin-bottom: 1rem;
+  color: var(--color);
 }
 .tomlinism-quote-container .shrink-text {
   font-size: 3.5rem;

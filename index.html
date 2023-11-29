@@ -6,11 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Tomlinism</title>
     <link rel="stylesheet" href="./styles/reset.css" />
-    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/main.css" id="theme-link"/>
+    <link rel="stylesheet" href="./styles/home-theme.css" id="theme-link" />
     <link rel="icon" href="./images/icon16.png" type="image/x-icon" />
   </head>
   <body>
     <main>
+      <div class="select">
+        <select name="theme-select" id="theme-select">
+            <option class="theme-option" value = "home">Home</option>
+            <option class="theme-option" value = "away">Away</option>
+            <option class="theme-option" value = "color-rush">Color Rush</option>
+            <option class="theme-option" value = "bumblebee">Bumblebee</option>
+        </select>
+    </div>
       <div class="tomlinism-quote-container">
         <h1>Tomlinism Tabs</h1>
         <p id="tomlinism-quote"></p>
