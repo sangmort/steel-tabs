@@ -8,7 +8,6 @@ $white: #efefef;
 $h1-size: 3rem;
 $p-size: 20px;
 
-
 $themes: (
   home: (
     background-color: $black,
@@ -46,7 +45,6 @@ $themes: (
     stripe-04: $gold,
     stripe-05: $gold,
   ),
-
 );
 
 @each $theme, $map in $themes {
@@ -60,6 +58,8 @@ $themes: (
 body {
   background-color: var(--background-color);
   color: var(--color);
+  font-size: $p-size;
+  overflow: hidden;
 }
 
 // Generate headings sizes
@@ -68,13 +68,6 @@ body {
     font-size: $h1-size - 0.35rem * ($i - 1);
   }
 }
-
-// body {
-//   background-color: $background-color;
-//   color: $text-color;
-//   font-size: $p-size;
-//   overflow: hidden;
-// }
 
 strong {
   font-weight: bolder;
@@ -96,18 +89,15 @@ strong {
     width: 66dvw;
     margin-bottom: 1rem;
     color: var(--color);
-}
+  }
 
-
-.shrink-text {
+  .shrink-text {
     font-size: 3.5rem;
-}
+  }
 
-
-
-    h1 {
-        display: none;
-    }
+  h1 {
+    display: none;
+  }
 }
 
 @mixin stripe-styles($height, $width) {
