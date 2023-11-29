@@ -1,4 +1,3 @@
-
 $gold: #ffb612;
 $black: #101820;
 $red: #c60c30;
@@ -14,16 +13,40 @@ $themes: (
   home: (
     background-color: $black,
     color: $white,
+    stripe-01: $gold,
+    stripe-02: $white,
+    stripe-03: $gold,
+    stripe-04: $white,
+    stripe-05: $gold,
   ),
   away: (
     background-color: $white,
     color: $black,
+    stripe-01: $gold,
+    stripe-02: $white,
+    stripe-03: $gold,
+    stripe-04: $white,
+    stripe-05: $gold,
   ),
   color-rush: (
     background-color: $black,
     color: $gold,
+    stripe-01: $gold,
+    stripe-02: $gold,
+    stripe-03: $gold,
+    stripe-04: $gold,
+    stripe-05: $gold,
   ),
-  // Add more themes here...
+  bumblebee: (
+    background-color: $black,
+    color: $gold,
+    stripe-01: $gold,
+    stripe-02: $gold,
+    stripe-03: $gold,
+    stripe-04: $gold,
+    stripe-05: $gold,
+  ),
+
 );
 
 @each $theme, $map in $themes {
@@ -108,7 +131,7 @@ strong {
   .stripe1-left,
   .stripe1-right {
     @include stripe-styles(100%, 130%);
-    background-color: $gold;
+    background-color: var(--stripe-01);
     border-top: 1rem solid $black;
     border-bottom: 1rem solid $black;
   }
@@ -124,7 +147,7 @@ strong {
   .stripe2-left,
   .stripe2-right {
     @include stripe-styles(100%, 110%);
-    background-color: $white;
+    background-color: var(--stripe-02);
     border-bottom: 1rem solid $black;
   }
 
@@ -139,7 +162,7 @@ strong {
   .stripe3-left,
   .stripe3-right {
     @include stripe-styles(100%, 150%);
-    background-color: $gold;
+    background-color: var(--stripe-03);
   }
   .stripe3-left {
     grid-area: 4 / 1 / 5 / 2;
@@ -150,7 +173,7 @@ strong {
   .stripe4-left,
   .stripe4-right {
     @include stripe-styles(100%, 110%);
-    background-color: $white;
+    background-color: var(--stripe-04);
     border-top: 1rem solid $black;
     border-bottom: 1rem solid $black;
   }
@@ -163,7 +186,7 @@ strong {
   .stripe5-left,
   .stripe5-right {
     @include stripe-styles(100%, 130%);
-    background-color: $gold;
+    background-color: var(--stripe-05);
     border-bottom: 1rem solid $black;
   }
   .stripe5-left {
