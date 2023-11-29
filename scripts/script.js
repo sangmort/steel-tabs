@@ -33,10 +33,12 @@ function setTheme(theme) {
   localStorage.setItem('selectedTheme', theme);
 }
 
-// Listens for theme changes in dropdown & updates the page
-document.querySelector('#theme-select').addEventListener('change', function(e) {
-  const selectedTheme = e.target.value;
-  setTheme(selectedTheme);
+// Listens for theme changes in radio buttons & updates the page
+document.querySelectorAll('input[name="theme"]').forEach(function(radio) {
+  radio.addEventListener('change', function() {
+    const selectedTheme = this.value;
+    setTheme(selectedTheme);
+  });
 });
 
 // Sets default theme on page load based on stored preference or defaults to home-theme
