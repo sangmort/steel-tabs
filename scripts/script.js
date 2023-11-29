@@ -27,12 +27,20 @@ async function tomlinismGenerator() {
 
 tomlinismGenerator();
 
-// Set the default theme on initial load
-document.addEventListener('DOMContentLoaded', function() {
-  document.body.className = 'theme-home';
+// Sets selected theme for the page
+function setTheme(theme) {
+  document.body.className = 'theme-' + theme;
+  localStorage.setItem('selectedTheme', theme);
+}
+
+// Listens for theme changes in dropdown & updates the page
+document.querySelector('#theme-select').addEventListener('change', function(e) {
+  const selectedTheme = e.target.value;
+  setTheme(selectedTheme);
 });
 
-// Switch themes
-document.querySelector('#theme-select').addEventListener('change', function(e) {
-  document.body.className = 'theme-' + e.target.value;
+// Sets default theme on page load based on stored preference or defaults to home-theme
+document.addEventListener('DOMContentLoaded', function() {
+  const storedTheme = localStorage.getItem('selectedTheme');
+  setTheme(storedTheme || 'home');
 });
