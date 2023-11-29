@@ -18,5 +18,10 @@
       "js": ["./scripts/script.js"]
     }
   ],
-  "web_accessible_resources": ["./scripts/quotes.json"]
+  "web_accessible_resources": [
+    {
+      "resources": ["./scripts/quotes.json"],
+      "matches": ["<all_urls>"]
+    }
+  ]
 }
