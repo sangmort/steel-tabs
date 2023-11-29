@@ -27,6 +27,7 @@ async function tomlinismGenerator() {
 
 tomlinismGenerator();
 
+// Switch themes
 document.querySelector('#theme-select').addEventListener('change', function(e) {
   document.body.className = 'theme-' + e.target.value;
 });
