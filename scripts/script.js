@@ -27,6 +27,11 @@ async function tomlinismGenerator() {
 
 tomlinismGenerator();
 
+// Set the default theme on initial load
+document.addEventListener('DOMContentLoaded', function() {
+  document.body.className = 'theme-home';
+});
+
 // Switch themes
 document.querySelector('#theme-select').addEventListener('change', function(e) {
   document.body.className = 'theme-' + e.target.value;
