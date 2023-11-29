@@ -38,6 +38,12 @@ document.querySelectorAll('input[name="theme"]').forEach(function(radio) {
   radio.addEventListener('change', function() {
     const selectedTheme = this.value;
     setTheme(selectedTheme);
+
+    document.querySelectorAll('.options label').forEach(function(label) {
+      label.classList.remove('checked');
+    });
+
+    this.parentElement.classList.add('checked');
   });
 });
 
@@ -45,4 +51,10 @@ document.querySelectorAll('input[name="theme"]').forEach(function(radio) {
 document.addEventListener('DOMContentLoaded', function() {
   const storedTheme = localStorage.getItem('selectedTheme');
   setTheme(storedTheme || 'home');
+
+  // Add the 'checked' class to the label of the initially selected radio button
+  const checkedRadio = document.querySelector('input[name="theme"]:checked');
+  if (checkedRadio) {
+    checkedRadio.parentElement.classList.add('checked');
+  }
 });
