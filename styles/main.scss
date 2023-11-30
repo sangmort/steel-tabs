@@ -224,6 +224,7 @@ strong {
     }
   }
 }
+
 @mixin stripe-styles($height, $width) {
   height: $height;
   width: $width;
@@ -287,33 +288,41 @@ strong {
     background-color: var(--stripe-03);
     outline: var(--stripes-outline);
   }
+
   .stripe3-left {
     grid-area: 4 / 1 / 5 / 2;
   }
+
   .stripe3-right {
     grid-area: 4 / 3 / 5 / 4;
   }
+
   .stripe4-left,
   .stripe4-right {
     @include stripe-styles(100%, 100%);
     background-color: var(--stripe-04);
     outline: var(--stripes-outline);
   }
+
   .stripe4-left {
     grid-area: 5 / 1 / 6 / 2;
   }
+
   .stripe4-right {
     grid-area: 5 / 3 / 6 / 4;
   }
+
   .stripe5-left,
   .stripe5-right {
     @include stripe-styles(100%, 100%);
     background-color: var(--stripe-05);
     outline: var(--stripes-outline);
   }
+
   .stripe5-left {
     grid-area: 6 / 1 / 7 / 2;
   }
+
   .stripe5-right {
     grid-area: 6 / 3 / 7 / 4;
   }
