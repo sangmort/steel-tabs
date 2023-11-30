@@ -56,8 +56,18 @@ $themes: (
   ),
   bumblebee: (
     background-color: transparent,
-    background-image: linear-gradient(0deg, #fec838 26.47%, $black 26.47%, $black 50%, #fec838 50%, #fec838 76.47%, $black 76.47%, $black 100%),
-    background-size: 180.00px 170.00px,
+    background-image:
+      linear-gradient(
+        0deg,
+        #fec838 26.47%,
+        $black 26.47%,
+        $black 50%,
+        #fec838 50%,
+        #fec838 76.47%,
+        $black 76.47%,
+        $black 100%
+      ),
+    background-size: 180px 170px,
     text-outline: 2rem solid $black,
     text-bg-color: $white,
     color: $black,
@@ -177,27 +187,31 @@ strong {
   flex-direction: column;
   position: fixed;
 
-
-  p {
-    font-size: 5rem;
-    width: 66dvw;
-    margin-bottom: 1rem;
-    color: var(--color);
-    padding: 4rem 3rem;
-    background-color: var(--text-bg-color);
-    outline: var(--text-outline);
-    height: 30dvh;
-  }
-
-  .shrink-text {
-    font-size: 3.5rem;
-  }
-
   h1 {
     display: none;
   }
-}
 
+  .tomlinism-quote-inner-wrapper {
+    display: flex;
+    padding: 4rem 3rem;
+    background-color: var(--text-bg-color);
+    outline: var(--text-outline);
+    height: 60dvh;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      font-size: 5rem;
+      width: 66dvw;
+      color: var(--color);
+    }
+
+    .shrink-text {
+      font-size: 3.5rem;
+    }
+  }
+}
 @mixin stripe-styles($height, $width) {
   height: $height;
   width: $width;
