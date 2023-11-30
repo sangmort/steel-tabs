@@ -205,17 +205,19 @@ input:checked + #content-wrapper .stripe-01 .options label:before {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 50dvh;
 }
 #content-wrapper .stripe-04 h1 {
   display: none;
 }
-#content-wrapper .stripe-04 p {
-  font-size: 5rem;
-  width: 60rem;
+#content-wrapper .stripe-04 #tomlinism-quote {
+  font-size: 4rem;
   color: var(--color);
+  width: 70dvw;
+  text-align: center;
 }
 #content-wrapper .stripe-04 .shrink-text {
-  font-size: 3.5rem;
+  font-size: 1.75rem;
 }
 #content-wrapper .stripe-05 {
   height: 100%;

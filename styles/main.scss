@@ -240,19 +240,20 @@ strong {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 50dvh;
 
     h1 {
       display: none;
     }
 
-    p {
-      font-size: 5rem;
-      width: 60rem;
+    #tomlinism-quote {
+      font-size: 4rem;
       color: var(--color);
+      width: 70dvw;
+      text-align: center;
     }
-
     .shrink-text {
-      font-size: 3.5rem;
+      font-size: 1.75rem;
     }
   }
 
