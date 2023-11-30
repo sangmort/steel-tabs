@@ -171,9 +171,10 @@ strong {
   width: 66dvw;
   margin-bottom: 1rem;
   color: var(--color);
-  padding: 2rem 1rem;
+  padding: 4rem 3rem;
   background-color: var(--text-bg-color);
   outline: var(--text-outline);
+  height: 30dvh;
 }
 .tomlinism-quote-container .shrink-text {
   font-size: 3.5rem;
