@@ -6,9 +6,10 @@
   --options-unchecked-fill: #101820;
   --text-outline: none;
   --text-bg-color: none;
-  --color: #efefef;
+  --quote-color: #101820;
+  --option-color: #efefef;
   --stripes: none;
-  --stripes-outline: 1rem solid #101820;
+  --stripes-outline: 0.5rem solid#101820;
   --stripe-01: #ffb612;
   --stripe-02: #efefef;
   --stripe-03: #ffb612;
@@ -23,9 +24,10 @@
   --options-unchecked-fill: #efefef;
   --text-outline: none;
   --text-bg-color: none;
-  --color: #101820;
+  --quote-color: #101820;
+  --option-color: #101820;
   --stripes: none;
-  --stripes-outline: 1rem solid #101820;
+  --stripes-outline: 0.5rem solid#101820;
   --stripe-01: #ffb612;
   --stripe-02: #efefef;
   --stripe-03: #ffb612;
@@ -40,9 +42,10 @@
   --options-unchecked-fill: #101820;
   --text-outline: none;
   --text-bg-color: none;
-  --color: #ffb612;
+  --quote-color: #101820;
+  --option-color: #ffb612;
   --stripes: none;
-  --stripes-outline: 1rem solid #101820;
+  --stripes-outline: 0.5rem solid#101820;
   --stripe-01: #ffb612;
   --stripe-02: #ffb612;
   --stripe-03: #ffb612;
@@ -57,9 +60,10 @@
   --options-unchecked-fill: #efefef;
   --text-outline: 2rem solid #101820;
   --text-bg-color: #efefef;
-  --color: #101820;
+  --quote-color: #101820;
+  --option-color: #101820;
   --stripes: block;
-  --stripes-outline: 1rem solid #101820;
+  --stripes-outline: 0.5rem solid#101820;
   --stripe-01: #101820;
   --stripe-02: #101820;
   --stripe-03: #101820;
@@ -69,7 +73,7 @@
 
 body {
   background-color: var(--background-color);
-  color: var(--color);
+  color: var(--quote-color);
   font-size: 20px;
   overflow: hidden;
 }
@@ -142,14 +146,14 @@ strong {
   padding: 0 2rem;
   cursor: pointer;
   font-size: 1rem;
-  color: var(--color);
+  color: var(--option-color);
 }
 #content-wrapper .stripe-01 .options label.checked {
-  color: var(--color);
+  color: var(--option-color);
 }
 #content-wrapper .stripe-01 .options label.checked:before {
-  background-color: var(--color);
-  border-color: var(--color);
+  background-color: var(--option-color);
+  border-color: var(--quote-color);
 }
 #content-wrapper .stripe-01 .options label:before {
   content: "";
@@ -159,23 +163,23 @@ strong {
   transform: translateY(-50%);
   width: 20px;
   height: 20px;
-  border: 2px solid var(--color);
+  border: 2px solid var(--option-color);
   background-color: var(--options-unchecked-fill);
   border-radius: 50%;
   transition: background-color 0.3s ease;
 }
 input:checked + #content-wrapper .stripe-01 .options label:before {
-  background-color: var(--color);
-  border-color: var(--color);
+  background-color: var(--option-color);
+  border-color: var(--option-color);
   content: "•";
   text-align: center;
   line-height: 20px;
 }
 #content-wrapper .stripe-01 .options label:hover {
-  color: var(--color);
+  color: var(--option-color);
 }
 #content-wrapper .stripe-01 .options label:hover:before {
-  background-color: var(--color);
+  background-color: var(--option-color);
 }
 #content-wrapper .stripe-01 .options input {
   position: absolute;
@@ -211,7 +215,7 @@ input:checked + #content-wrapper .stripe-01 .options label:before {
 }
 #content-wrapper .stripe-04 #tomlinism-quote {
   font-size: 4rem;
-  color: var(--color);
+  color: var(--quote-color);
   width: 70dvw;
   text-align: center;
 }
