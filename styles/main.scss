@@ -113,7 +113,6 @@ body {
 .options-container {
   width: 100dvw;
   position: absolute;
-  top: 2rem;
   z-index: 1000000;
   display: flex;
   justify-content: center;
@@ -235,7 +234,7 @@ strong {
 }
 
 #bumblebee-stripes {
-  display: var(--stripes);
+  display: none;
   background-image: var(--background-image);
   background-size: var(--background-size);
   height: 100dvh;
