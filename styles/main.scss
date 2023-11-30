@@ -11,7 +11,12 @@ $p-size: 20px;
 $themes: (
   home: (
     background-color: $black,
+    background-image: none,
+    background-size: auto,
+    text-border: none,
+    text-bg-color: none,
     color: $white,
+    stripes: grid,
     stripe-01: $gold,
     stripe-02: $white,
     stripe-03: $gold,
@@ -20,7 +25,12 @@ $themes: (
   ),
   away: (
     background-color: $white,
+    background-image: none,
+    background-size: auto,
+    text-border: none,
+    text-bg-color: none,
     color: $black,
+    stripes: grid,
     stripe-01: $gold,
     stripe-02: $white,
     stripe-03: $gold,
@@ -29,7 +39,12 @@ $themes: (
   ),
   color-rush: (
     background-color: $black,
+    background-image: none,
+    background-size: auto,
+    text-border: none,
+    text-bg-color: none,
     color: $gold,
+    stripes: grid,
     stripe-01: $gold,
     stripe-02: $gold,
     stripe-03: $gold,
@@ -37,8 +52,13 @@ $themes: (
     stripe-05: $gold,
   ),
   bumblebee: (
-    background-color: $black,
-    color: $gold,
+    background-color: transparent,
+    background-image: linear-gradient(0deg, #fec838 26.47%, $black 26.47%, $black 50%, #fec838 50%, #fec838 76.47%, $black 76.47%, $black 100%),
+    background-size: 180.00px 170.00px,
+    text-border: 2rem solid $black,
+    text-bg-color: $white,
+    color: $black,
+    stripes: none,
     stripe-01: $gold,
     stripe-02: $gold,
     stripe-03: $gold,
@@ -57,6 +77,8 @@ $themes: (
 
 body {
   background-color: var(--background-color);
+  background-image: var(--background-image);
+  background-size: var(--background-size);
   color: var(--color);
   font-size: $p-size;
   overflow: hidden;
@@ -74,6 +96,9 @@ body {
   display: flex;
   justify-content: space-around;
   margin: 20px;
+  border: var(--text-border);
+  background-color: var(--text-bg-color);
+  padding: 2rem;
 
   label {
     display: block;
@@ -146,12 +171,17 @@ strong {
   justify-content: center;
   width: 100dvw;
   flex-direction: column;
+  position: fixed;
+
 
   p {
     font-size: 5rem;
     width: 66dvw;
     margin-bottom: 1rem;
     color: var(--color);
+    padding: 2rem 1rem;
+    background-color: var(--text-bg-color);
+    border: var(--text-border);
   }
 
   .shrink-text {
@@ -169,7 +199,7 @@ strong {
 }
 
 #content-wrapper {
-  display: grid;
+  display: var(--stripes);
   grid-template-columns: 1fr 6fr 1fr;
   grid-template-rows: 1.5fr repeat(2, 1fr) 3fr repeat(2, 1fr) 1.5fr;
   grid-column-gap: 0px;
