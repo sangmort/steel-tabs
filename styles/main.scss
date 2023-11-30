@@ -69,7 +69,7 @@ body {
   }
 }
 
-// Apply styles to the radio buttons and labels
+// Apply styles to theme radio buttons and labels
 .options {
   display: flex;
   justify-content: space-around;
@@ -93,7 +93,7 @@ body {
     }
 
     &:before {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       top: 50%;
@@ -110,7 +110,7 @@ body {
     input:checked + &:before {
       background-color: var(--color);
       border-color: var(--color);
-      content: '\2022';
+      content: "\2022";
       text-align: center;
       line-height: 20px;
     }
@@ -125,22 +125,12 @@ body {
     }
   }
 
-  // Apply styles when the radio button is focused
-  input:focus + label {
-    outline: 2px solid var(--color);
-  }
-
   // Hide the default radio button
   input {
     position: absolute;
     opacity: 0;
-
-    &:focus + label {
-      outline: 2px solid var(--color);
-    }
   }
 }
-
 
 strong {
   font-weight: bolder;

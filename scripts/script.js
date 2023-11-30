@@ -27,34 +27,39 @@ async function tomlinismGenerator() {
 
 tomlinismGenerator();
 
-// Sets selected theme for the page
-function setTheme(theme) {
-  document.body.className = 'theme-' + theme;
-  localStorage.setItem('selectedTheme', theme);
-}
+document.addEventListener("DOMContentLoaded", function () {
+  // Set selected theme for the page
+  function setTheme(theme) {
+    document.body.className = "theme-" + theme;
+    localStorage.setItem("selectedTheme", theme);
+  }
 
-// Listens for theme changes in radio buttons & updates the page
-document.querySelectorAll('input[name="theme"]').forEach(function(radio) {
-  radio.addEventListener('change', function() {
-    const selectedTheme = this.value;
-    setTheme(selectedTheme);
+  // Listen for theme changes in radio buttons & update the page
+  document.querySelectorAll('input[name="theme"]').forEach(function (radio) {
+    radio.addEventListener("change", function () {
+      const selectedTheme = this.value;
+      setTheme(selectedTheme);
 
-    document.querySelectorAll('.options label').forEach(function(label) {
-      label.classList.remove('checked');
+      document.querySelectorAll(".options label").forEach(function (label) {
+        label.classList.remove("checked");
+      });
+
+      const labelForRadio = document.querySelector(`label[for="${this.id}"]`);
+      if (labelForRadio) {
+        labelForRadio.classList.add("checked");
+      }
     });
-
-    this.parentElement.classList.add('checked');
   });
-});
 
-// Sets default theme on page load based on stored preference or defaults to home-theme
-document.addEventListener('DOMContentLoaded', function() {
-  const storedTheme = localStorage.getItem('selectedTheme');
-  setTheme(storedTheme || 'home');
+  // Set default theme on page load based on stored preference or default to home-theme
+  const storedTheme = localStorage.getItem("selectedTheme");
+  const defaultTheme = storedTheme || "home";
 
-  // Add the 'checked' class to the label of the initially selected radio button
-  const checkedRadio = document.querySelector('input[name="theme"]:checked');
-  if (checkedRadio) {
-    checkedRadio.parentElement.classList.add('checked');
+  // Set the default theme and mark corresponding label as checked
+  setTheme(defaultTheme);
+
+  const checkedLabel = document.querySelector(`label[for="theme-${defaultTheme}"]`);
+  if (checkedLabel) {
+    checkedLabel.classList.add("checked");
   }
 });

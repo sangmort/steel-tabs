@@ -116,15 +116,9 @@ input:checked + .options label:before {
 .options label:hover:before {
   background-color: var(--color);
 }
-.options input:focus + label {
-  outline: 2px solid var(--color);
-}
 .options input {
   position: absolute;
   opacity: 0;
-}
-.options input:focus + label {
-  outline: 2px solid var(--color);
 }
 
 strong {
