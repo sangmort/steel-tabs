@@ -62,12 +62,12 @@
   --quote-color: #101820;
   --option-color: #101820;
   --stripes: block;
-  --stripes-outline: 0.5rem solid#101820;
-  --stripe-01: #101820;
+  --stripes-outline: 0.5rem solid#ffb612;
+  --stripe-01: #ffb612;
   --stripe-02: #101820;
-  --stripe-03: #101820;
+  --stripe-03: #ffb612;
   --stripe-04: #101820;
-  --stripe-05: #101820;
+  --stripe-05: #ffb612;
 }
 
 body {
@@ -178,6 +178,9 @@ input:checked + #content-wrapper .stripe-01 .options label:before {
 }
 #content-wrapper .stripe-01 .options label:hover:before {
   background-color: var(--option-color);
+}
+#content-wrapper .stripe-01 .options label:last-of-type {
+  padding: 0 0 0 1rem;
 }
 #content-wrapper .stripe-01 .options input {
   position: absolute;

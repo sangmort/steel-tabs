@@ -81,12 +81,12 @@ $themes: (
     quote-color: $black,
     option-color: $black,
     stripes: block,
-    stripes-outline: $stripe-border-width + $black,
-    stripe-01: $black,
+    stripes-outline: $stripe-border-width + $gold,
+    stripe-01: $gold,
     stripe-02: $black,
-    stripe-03: $black,
+    stripe-03: $gold,
     stripe-04: $black,
-    stripe-05: $black,
+    stripe-05: $gold,
   ),
 );
 
@@ -172,7 +172,7 @@ strong {
         font-size: 1rem;
         color: var(--option-color);
         text-transform: uppercase;
-        opacity: .85;
+        opacity: 0.85;
 
         &.checked {
           color: var(--option-color);
@@ -190,8 +190,8 @@ strong {
           left: 0;
           top: 50%;
           transform: translateY(-50%);
-          width: calc($p-size - .5rem);
-          height: calc($p-size - .5rem);
+          width: calc($p-size - 0.5rem);
+          height: calc($p-size - 0.5rem);
           border: 2px solid var(--option-color);
           background-color: var(--options-unchecked-fill);
           border-radius: 50%;
@@ -214,6 +214,9 @@ strong {
         }
       }
 
+      label:last-of-type {
+        padding: 0 0 0 1rem;
+      }
       // Hide default radio button
       input {
         position: absolute;
