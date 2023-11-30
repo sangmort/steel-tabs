@@ -205,7 +205,7 @@ input:checked + #content-wrapper .stripe-01 .options label:before {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50dvh;
+  height: 46dvh;
 }
 #content-wrapper .stripe-04 h1 {
   display: none;
