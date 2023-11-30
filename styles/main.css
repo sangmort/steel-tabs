@@ -96,15 +96,26 @@ h6 {
   font-size: 1.25rem;
 }
 
-.options {
+.options-container {
+  width: 100dvw;
+  position: absolute;
+  top: 2rem;
+  z-index: 1000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.options-container .options {
   display: flex;
   justify-content: space-around;
-  margin: 20px;
   outline: var(--text-outline);
   background-color: var(--text-bg-color);
   padding: 2rem;
+  width: 40dvw;
 }
-.options label {
+.options-container .options label {
   display: block;
   position: relative;
   padding-left: 30px;
@@ -112,14 +123,14 @@ h6 {
   font-size: 1rem;
   color: var(--color);
 }
-.options label.checked {
+.options-container .options label.checked {
   color: var(--color);
 }
-.options label.checked:before {
+.options-container .options label.checked:before {
   background-color: var(--color);
   border-color: var(--color);
 }
-.options label:before {
+.options-container .options label:before {
   content: "";
   position: absolute;
   left: 0;
@@ -132,20 +143,20 @@ h6 {
   border-radius: 50%;
   transition: background-color 0.3s ease;
 }
-input:checked + .options label:before {
+input:checked + .options-container .options label:before {
   background-color: var(--color);
   border-color: var(--color);
   content: "•";
   text-align: center;
   line-height: 20px;
 }
-.options label:hover {
+.options-container .options label:hover {
   color: var(--color);
 }
-.options label:hover:before {
+.options-container .options label:hover:before {
   background-color: var(--color);
 }
-.options input {
+.options-container .options input {
   position: absolute;
   opacity: 0;
 }
