@@ -16,7 +16,7 @@ $themes: (
     text-outline: none,
     text-bg-color: none,
     color: $white,
-    stripes: grid,
+    stripes: none,
     stripes-outline: 1rem solid $black,
     stripe-01: $gold,
     stripe-02: $white,
@@ -31,7 +31,7 @@ $themes: (
     text-outline: none,
     text-bg-color: none,
     color: $black,
-    stripes: grid,
+    stripes: none,
     stripes-outline: 1rem solid $black,
     stripe-01: $gold,
     stripe-02: $white,
@@ -46,7 +46,7 @@ $themes: (
     text-outline: none,
     text-bg-color: none,
     color: $gold,
-    stripes: grid,
+    stripes: none,
     stripes-outline: 1rem solid $black,
     stripe-01: $gold,
     stripe-02: $gold,
@@ -55,7 +55,7 @@ $themes: (
     stripe-05: $gold,
   ),
   bumblebee: (
-    background-color: transparent,
+    background-color: $black,
     background-image:
       linear-gradient(
         0deg,
@@ -71,13 +71,13 @@ $themes: (
     text-outline: 2rem solid $black,
     text-bg-color: $white,
     color: $black,
-    stripes: none,
+    stripes: block,
     stripes-outline: 1rem solid $black,
-    stripe-01: $gold,
-    stripe-02: $gold,
-    stripe-03: $gold,
-    stripe-04: $gold,
-    stripe-05: $gold,
+    stripe-01: red,
+    stripe-02: $black,
+    stripe-03: $black,
+    stripe-04: $black,
+    stripe-05: $black,
   ),
 );
 
@@ -91,8 +91,8 @@ $themes: (
 
 body {
   background-color: var(--background-color);
-  background-image: var(--background-image);
-  background-size: var(--background-size);
+  // background-image: var(--background-image);
+  // background-size: var(--background-size);
   color: var(--color);
   font-size: $p-size;
   overflow: hidden;
@@ -229,8 +229,17 @@ strong {
   width: $width;
 }
 
-#content-wrapper {
+#bumblebee-stripes {
   display: var(--stripes);
+  background-image: var(--background-image);
+  background-size: var(--background-size);
+  height: 100dvh;
+  width: 80dvw;
+  margin: 0 auto;
+}
+
+#content-wrapper {
+  display: grid;
   grid-template-columns: 1fr 6fr 1fr;
   grid-template-rows: 1.5fr repeat(2, 1fr) 3fr repeat(2, 1fr) 1.5fr;
   grid-column-gap: 0px;

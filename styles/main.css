@@ -6,7 +6,7 @@
   --text-outline: none;
   --text-bg-color: none;
   --color: #efefef;
-  --stripes: grid;
+  --stripes: none;
   --stripes-outline: 1rem solid #101820;
   --stripe-01: #ffb612;
   --stripe-02: #efefef;
@@ -22,7 +22,7 @@
   --text-outline: none;
   --text-bg-color: none;
   --color: #101820;
-  --stripes: grid;
+  --stripes: none;
   --stripes-outline: 1rem solid #101820;
   --stripe-01: #ffb612;
   --stripe-02: #efefef;
@@ -38,22 +38,6 @@
   --text-outline: none;
   --text-bg-color: none;
   --color: #ffb612;
-  --stripes: grid;
-  --stripes-outline: 1rem solid #101820;
-  --stripe-01: #ffb612;
-  --stripe-02: #ffb612;
-  --stripe-03: #ffb612;
-  --stripe-04: #ffb612;
-  --stripe-05: #ffb612;
-}
-
-.theme-bumblebee {
-  --background-color: transparent;
-  --background-image: linear-gradient(0deg, #fec838 26.47%, #101820 26.47%, #101820 50%, #fec838 50%, #fec838 76.47%, #101820 76.47%, #101820 100%);
-  --background-size: 180px 170px;
-  --text-outline: 2rem solid #101820;
-  --text-bg-color: #efefef;
-  --color: #101820;
   --stripes: none;
   --stripes-outline: 1rem solid #101820;
   --stripe-01: #ffb612;
@@ -63,10 +47,24 @@
   --stripe-05: #ffb612;
 }
 
+.theme-bumblebee {
+  --background-color: #101820;
+  --background-image: linear-gradient(0deg, #fec838 26.47%, #101820 26.47%, #101820 50%, #fec838 50%, #fec838 76.47%, #101820 76.47%, #101820 100%);
+  --background-size: 180px 170px;
+  --text-outline: 2rem solid #101820;
+  --text-bg-color: #efefef;
+  --color: #101820;
+  --stripes: block;
+  --stripes-outline: 1rem solid #101820;
+  --stripe-01: red;
+  --stripe-02: #101820;
+  --stripe-03: #101820;
+  --stripe-04: #101820;
+  --stripe-05: #101820;
+}
+
 body {
   background-color: var(--background-color);
-  background-image: var(--background-image);
-  background-size: var(--background-size);
   color: var(--color);
   font-size: 20px;
   overflow: hidden;
@@ -199,8 +197,17 @@ strong {
   font-size: 3.5rem;
 }
 
-#content-wrapper {
+#bumblebee-stripes {
   display: var(--stripes);
+  background-image: var(--background-image);
+  background-size: var(--background-size);
+  height: 100dvh;
+  width: 80dvw;
+  margin: 0 auto;
+}
+
+#content-wrapper {
+  display: grid;
   grid-template-columns: 1fr 6fr 1fr;
   grid-template-rows: 1.5fr repeat(2, 1fr) 3fr repeat(2, 1fr) 1.5fr;
   grid-column-gap: 0px;
