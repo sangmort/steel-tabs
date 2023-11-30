@@ -135,7 +135,6 @@ strong {
   justify-content: space-around;
   outline: var(--text-outline);
   background-color: var(--text-bg-color);
-  padding: 2rem;
 }
 #content-wrapper .stripe-01 .options label {
   display: flex;
