@@ -212,79 +212,59 @@ strong {
 
 #content-wrapper {
   display: grid;
-  grid-template-columns: 1fr 6fr 1fr;
-  grid-template-rows: 1.5fr repeat(2, 1fr) 3fr repeat(2, 1fr) 1.5fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-  justify-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 4fr 1fr 1fr 1fr;
+  gap: 0px 0px;
   width: 100dvw;
   height: 100dvh;
+  grid-template-areas: "stripe-01" "stripe-02" "stripe-03" "stripe-04" "stripe-05" "stripe-06" "stripe-07";
 }
-#content-wrapper .stripe1-left,
-#content-wrapper .stripe1-right {
+#content-wrapper .stripe-01 {
+  height: 100%;
+  width: 100%;
+  background-color: var(--background-color);
+  outline: var(--stripes-outline);
+  grid-area: stripe-01;
+}
+#content-wrapper .stripe-02 {
   height: 100%;
   width: 100%;
   background-color: var(--stripe-01);
   outline: var(--stripes-outline);
+  grid-area: stripe-02;
 }
-#content-wrapper .stripe1-left {
-  grid-area: 2/1/3/2;
-}
-#content-wrapper .stripe1-right {
-  grid-area: 2/3/3/4;
-}
-#content-wrapper .stripe2-left,
-#content-wrapper .stripe2-right {
+#content-wrapper .stripe-03 {
   height: 100%;
   width: 100%;
   background-color: var(--stripe-02);
   outline: var(--stripes-outline);
+  grid-area: stripe-03;
 }
-#content-wrapper .stripe2-left {
-  grid-area: 3/1/4/2;
-}
-#content-wrapper .stripe2-right {
-  grid-area: 3/3/4/4;
-}
-#content-wrapper .stripe3-left,
-#content-wrapper .stripe3-right {
+#content-wrapper .stripe-04 {
   height: 100%;
   width: 100%;
   background-color: var(--stripe-03);
   outline: var(--stripes-outline);
+  grid-area: stripe-04;
 }
-#content-wrapper .stripe3-left {
-  grid-area: 4/1/5/2;
-}
-#content-wrapper .stripe3-right {
-  grid-area: 4/3/5/4;
-}
-#content-wrapper .stripe4-left,
-#content-wrapper .stripe4-right {
+#content-wrapper .stripe-05 {
   height: 100%;
   width: 100%;
   background-color: var(--stripe-04);
   outline: var(--stripes-outline);
+  grid-area: stripe-05;
 }
-#content-wrapper .stripe4-left {
-  grid-area: 5/1/6/2;
-}
-#content-wrapper .stripe4-right {
-  grid-area: 5/3/6/4;
-}
-#content-wrapper .stripe5-left,
-#content-wrapper .stripe5-right {
+#content-wrapper .stripe-06 {
   height: 100%;
   width: 100%;
   background-color: var(--stripe-05);
   outline: var(--stripes-outline);
+  grid-area: stripe-06;
 }
-#content-wrapper .stripe5-left {
-  grid-area: 6/1/7/2;
-}
-#content-wrapper .stripe5-right {
-  grid-area: 6/3/7/4;
+#content-wrapper .stripe-07 {
+  height: 100%;
+  width: 100%;
+  background-color: var(--background-color);
+  outline: var(--stripes-outline);
+  grid-area: stripe-07;
 }/*# sourceMappingURL=main.css.map */
