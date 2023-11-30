@@ -225,28 +225,28 @@ strong {
   .stripe-01 {
     @include stripe-styles(100%, 100%);
     background-color: var(--background-color);
-    outline: var(--stripes-outline);
+    border: var(--stripes-outline);
     grid-area: stripe-01;
   }
 
   .stripe-02 {
     @include stripe-styles(100%, 100%);
     background-color: var(--stripe-01);
-    outline: var(--stripes-outline);
+    border: var(--stripes-outline);
     grid-area: stripe-02;
   }
 
   .stripe-03 {
     @include stripe-styles(100%, 100%);
     background-color: var(--stripe-02);
-    outline: var(--stripes-outline);
+    border: var(--stripes-outline);
     grid-area: stripe-03;
   }
 
   .stripe-04 {
     @include stripe-styles(100%, 100%);
     background-color: var(--stripe-03);
-    outline: var(--stripes-outline);
+    border: var(--stripes-outline);
     grid-area: stripe-04;
     display: flex;
     justify-content: center;
@@ -271,21 +271,21 @@ strong {
   .stripe-05 {
     @include stripe-styles(100%, 100%);
     background-color: var(--stripe-04);
-    outline: var(--stripes-outline);
+    border: var(--stripes-outline);
     grid-area: stripe-05;
   }
 
   .stripe-06 {
     @include stripe-styles(100%, 100%);
     background-color: var(--stripe-05);
-    outline: var(--stripes-outline);
+    border: var(--stripes-outline);
     grid-area: stripe-06;
   }
 
   .stripe-07 {
     @include stripe-styles(100%, 100%);
     background-color: var(--background-color);
-    outline: var(--stripes-outline);
+    border: var(--stripes-outline);
     grid-area: stripe-07;
   }
 }

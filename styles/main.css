@@ -188,28 +188,28 @@ strong {
   height: 100%;
   width: 100%;
   background-color: var(--background-color);
-  outline: var(--stripes-outline);
+  border: var(--stripes-outline);
   grid-area: stripe-01;
 }
 #content-wrapper .stripe-02 {
   height: 100%;
   width: 100%;
   background-color: var(--stripe-01);
-  outline: var(--stripes-outline);
+  border: var(--stripes-outline);
   grid-area: stripe-02;
 }
 #content-wrapper .stripe-03 {
   height: 100%;
   width: 100%;
   background-color: var(--stripe-02);
-  outline: var(--stripes-outline);
+  border: var(--stripes-outline);
   grid-area: stripe-03;
 }
 #content-wrapper .stripe-04 {
   height: 100%;
   width: 100%;
   background-color: var(--stripe-03);
-  outline: var(--stripes-outline);
+  border: var(--stripes-outline);
   grid-area: stripe-04;
   display: flex;
   justify-content: center;
@@ -230,20 +230,20 @@ strong {
   height: 100%;
   width: 100%;
   background-color: var(--stripe-04);
-  outline: var(--stripes-outline);
+  border: var(--stripes-outline);
   grid-area: stripe-05;
 }
 #content-wrapper .stripe-06 {
   height: 100%;
   width: 100%;
   background-color: var(--stripe-05);
-  outline: var(--stripes-outline);
+  border: var(--stripes-outline);
   grid-area: stripe-06;
 }
 #content-wrapper .stripe-07 {
   height: 100%;
   width: 100%;
   background-color: var(--background-color);
-  outline: var(--stripes-outline);
+  border: var(--stripes-outline);
   grid-area: stripe-07;
 }/*# sourceMappingURL=main.css.map */
