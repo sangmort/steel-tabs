@@ -167,10 +167,12 @@ strong {
       label {
         display: flex;
         position: relative;
-        padding: 0 2rem;
+        padding: 0 1.75rem 0 1rem;
         cursor: pointer;
         font-size: 1rem;
         color: var(--option-color);
+        text-transform: uppercase;
+        opacity: .85;
 
         &.checked {
           color: var(--option-color);
@@ -181,14 +183,15 @@ strong {
           }
         }
 
+        // Radio
         &:before {
           content: "";
           position: absolute;
           left: 0;
           top: 50%;
           transform: translateY(-50%);
-          width: $p-size;
-          height: 20px;
+          width: calc($p-size - .5rem);
+          height: calc($p-size - .5rem);
           border: 2px solid var(--option-color);
           background-color: var(--options-unchecked-fill);
           border-radius: 50%;
@@ -199,9 +202,6 @@ strong {
         input:checked + &:before {
           background-color: var(--option-color);
           border-color: var(--option-color);
-          content: "\2022";
-          text-align: center;
-          line-height: 20px;
         }
 
         // Apply hover effect to labels
@@ -214,7 +214,7 @@ strong {
         }
       }
 
-      // Hide the default radio button
+      // Hide default radio button
       input {
         position: absolute;
         opacity: 0;
