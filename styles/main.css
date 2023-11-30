@@ -166,40 +166,6 @@ strong {
   font-weight: bolder;
 }
 
-.tomlinism-quote-container {
-  display: flex;
-  text-align: center;
-  height: 100dvh;
-  z-index: 1000;
-  position: fixed;
-  align-items: center;
-  justify-content: center;
-  width: 100dvw;
-  flex-direction: column;
-  position: fixed;
-}
-.tomlinism-quote-container h1 {
-  display: none;
-}
-.tomlinism-quote-container .tomlinism-quote-inner-wrapper {
-  display: flex;
-  padding: 4rem 3rem;
-  background-color: var(--text-bg-color);
-  outline: var(--text-outline);
-  height: 46dvh;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-}
-.tomlinism-quote-container .tomlinism-quote-inner-wrapper p {
-  font-size: 5rem;
-  width: 66dvw;
-  color: var(--color);
-}
-.tomlinism-quote-container .tomlinism-quote-inner-wrapper .shrink-text {
-  font-size: 3.5rem;
-}
-
 #bumblebee-stripes {
   display: none;
   background-image: var(--background-image);
@@ -245,6 +211,20 @@ strong {
   background-color: var(--stripe-03);
   outline: var(--stripes-outline);
   grid-area: stripe-04;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#content-wrapper .stripe-04 h1 {
+  display: none;
+}
+#content-wrapper .stripe-04 p {
+  font-size: 5rem;
+  width: 60rem;
+  color: var(--color);
+}
+#content-wrapper .stripe-04 .shrink-text {
+  font-size: 3.5rem;
 }
 #content-wrapper .stripe-05 {
   height: 100%;
