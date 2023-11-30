@@ -17,6 +17,7 @@ $themes: (
     text-bg-color: none,
     color: $white,
     stripes: grid,
+    stripes-outline: 1rem solid $black,
     stripe-01: $gold,
     stripe-02: $white,
     stripe-03: $gold,
@@ -31,6 +32,7 @@ $themes: (
     text-bg-color: none,
     color: $black,
     stripes: grid,
+    stripes-outline: 1rem solid $black,
     stripe-01: $gold,
     stripe-02: $white,
     stripe-03: $gold,
@@ -45,6 +47,7 @@ $themes: (
     text-bg-color: none,
     color: $gold,
     stripes: grid,
+    stripes-outline: 1rem solid $black,
     stripe-01: $gold,
     stripe-02: $gold,
     stripe-03: $gold,
@@ -59,6 +62,7 @@ $themes: (
     text-bg-color: $white,
     color: $black,
     stripes: none,
+    stripes-outline: 1rem solid $black,
     stripe-01: $gold,
     stripe-02: $gold,
     stripe-03: $gold,
@@ -96,7 +100,7 @@ body {
   display: flex;
   justify-content: space-around;
   margin: 20px;
-  border: var(--text-border);
+  outline: var(--text-border);
   background-color: var(--text-bg-color);
   padding: 2rem;
 
@@ -213,10 +217,9 @@ strong {
 
   .stripe1-left,
   .stripe1-right {
-    @include stripe-styles(100%, 130%);
+    @include stripe-styles(100%, 100%);
     background-color: var(--stripe-01);
-    border-top: 1rem solid $black;
-    border-bottom: 1rem solid $black;
+    outline: var(--stripes-outline);
   }
 
   .stripe1-left {
@@ -229,9 +232,9 @@ strong {
 
   .stripe2-left,
   .stripe2-right {
-    @include stripe-styles(100%, 110%);
+    @include stripe-styles(100%, 100%);
     background-color: var(--stripe-02);
-    border-bottom: 1rem solid $black;
+    outline: var(--stripes-outline);
   }
 
   .stripe2-left {
@@ -244,8 +247,9 @@ strong {
 
   .stripe3-left,
   .stripe3-right {
-    @include stripe-styles(100%, 150%);
+    @include stripe-styles(100%, 100%);
     background-color: var(--stripe-03);
+    outline: var(--stripes-outline);
   }
   .stripe3-left {
     grid-area: 4 / 1 / 5 / 2;
@@ -255,10 +259,9 @@ strong {
   }
   .stripe4-left,
   .stripe4-right {
-    @include stripe-styles(100%, 110%);
+    @include stripe-styles(100%, 100%);
     background-color: var(--stripe-04);
-    border-top: 1rem solid $black;
-    border-bottom: 1rem solid $black;
+    outline: var(--stripes-outline);
   }
   .stripe4-left {
     grid-area: 5 / 1 / 6 / 2;
@@ -268,9 +271,9 @@ strong {
   }
   .stripe5-left,
   .stripe5-right {
-    @include stripe-styles(100%, 130%);
+    @include stripe-styles(100%, 100%);
     background-color: var(--stripe-05);
-    border-bottom: 1rem solid $black;
+    outline: var(--stripes-outline);
   }
   .stripe5-left {
     grid-area: 6 / 1 / 7 / 2;
