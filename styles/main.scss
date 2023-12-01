@@ -11,6 +11,7 @@ $stripe-border-width: 0.75rem solid;
 $bgsize: 80dvh;
 $sm-stripe-height: 10dvh;
 $lg-stripe-height: 40dvh;
+$loader-size: 48px;
 
 
 $themes: (
@@ -159,7 +160,6 @@ body {
 
 .loader-wrapper {
   position: fixed;
-  grid-template-columns: 0.125fr 0.125fr 0.125fr;
   top: 0;
   left: 0;
   width: 100%;
@@ -169,18 +169,17 @@ body {
   display: grid;
   align-items: center;
   z-index: 9999;
-  align-content: center;
   justify-content: center;
 
-  .loader1 {
-    width: 48px;
-    height: 48px;
+  .loader {
+    width: $loader-size;
+    height: $loader-size;
     margin: auto;
     position: relative;
 
     &:before {
       content: "";
-      width: 48px;
+      width: $loader-size;
       height: 5px;
       background: #f0808050;
       position: absolute;
@@ -194,74 +193,35 @@ body {
       content: "";
       width: 100%;
       height: 100%;
-      background: $gold;
       position: absolute;
       top: 0;
       left: 0;
       border-radius: 4px;
       animation: jump7456 0.25s linear infinite;
+    }
+  }
+
+  .loader1 {
+    .loader {
+      &:after {
+        background: $gold;
+      }
     }
   }
 
   .loader2 {
-    width: 48px;
-    height: 48px;
-    margin: auto;
-    position: relative;
-
-    &:before {
-      content: "";
-      width: 48px;
-      height: 5px;
-      background: #f0808050;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      border-radius: 50%;
-      animation: shadow324 0.25s linear infinite;
-    }
-
-    &:after {
-      content: "";
-      width: 100%;
-      height: 100%;
-      background: $red;
-      position: absolute;
-      top: 0;
-      left: 0;
-      border-radius: 4px;
-      animation: jump7456 0.25s linear infinite;
+    .loader {
+      &:after {
+        background: $red;
+      }
     }
   }
 
   .loader3 {
-    width: 48px;
-    height: 48px;
-    margin: auto;
-    position: relative;
-
-    &:before {
-      content: "";
-      width: 48px;
-      height: 5px;
-      background: #f0808050;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      border-radius: 50%;
-      animation: shadow324 0.25s linear infinite;
-    }
-
-    &:after {
-      content: "";
-      width: 100%;
-      height: 100%;
-      background: $blue;
-      position: absolute;
-      top: 0;
-      left: 0;
-      border-radius: 4px;
-      animation: jump7456 0.25s linear infinite;
+    .loader {
+      &:after {
+        background: $blue;
+      }
     }
   }
 }
