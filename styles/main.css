@@ -66,20 +66,20 @@
   --font-style: normal;
   --font-weight: 200;
   --background-color: #101820;
-  --background-image: linear-gradient(0deg, #fec838 26.47%, #101820 26.47%, #101820 50%, #fec838 50%, #fec838 76.47%, #101820 76.47%, #101820 100%);
-  --background-size: 180px 170px;
+  --background-image: linear-gradient(0deg, #ffb612 25%, black 25%, black 50%, #ffb612 50%, #ffb612 75%, black 75%, black 100%);
+  --background-size: 80% 80%;
   --options-unchecked-fill: #efefef;
   --text-outline: 2rem solid #101820;
   --text-bg-color: #efefef;
   --quote-color: #101820;
   --option-color: #101820;
   --stripes: block;
-  --stripes-outline: 0.5rem solid#ffb612;
-  --stripe-01: #ffb612;
-  --stripe-02: #101820;
+  --stripes-outline: 0.5rem solid#101820;
+  --stripe-01: #101820;
+  --stripe-02: #ffb612;
   --stripe-03: #ffb612;
-  --stripe-04: #101820;
-  --stripe-05: #ffb612;
+  --stripe-04: #ffb612;
+  --stripe-05: #101820;
 }
 
 body {
@@ -225,7 +225,8 @@ input:checked + #content-wrapper .stripe-01 .options label:before {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 46dvh;
+  background-image: var(--background-image);
+  background-size: var(--background-size);
 }
 #content-wrapper .stripe-04 h1 {
   display: none;
@@ -235,6 +236,9 @@ input:checked + #content-wrapper .stripe-01 .options label:before {
   color: var(--quote-color);
   width: 70dvw;
   text-align: center;
+  background-color: var(--text-bg-color);
+  height: 46dvh;
+  display: flex;
 }
 #content-wrapper .stripe-04 .shrink-text {
   font-size: 1.75rem;
