@@ -10,7 +10,8 @@ $p-size: 20px;
 $stripe-border-width: 0.5rem solid;
 
 $themes: (
-  home: (font-family: Verdana,
+  home: (
+    font-family: Verdana,
     font-style: italic,
     font-weight: 500,
     background-color: $black,
@@ -29,7 +30,8 @@ $themes: (
     stripe-04: $white,
     stripe-05: $gold,
   ),
-  away: (font-family: Verdana,
+  away: (
+    font-family: Verdana,
     font-style: italic,
     font-weight: 500,
     background-color: $white,
@@ -48,7 +50,8 @@ $themes: (
     stripe-04: $white,
     stripe-05: $gold,
   ),
-  color-rush: (font-family: impact,
+  color-rush: (
+    font-family: impact,
     font-style: normal,
     font-weight: 200,
     background-color: $black,
@@ -67,11 +70,13 @@ $themes: (
     stripe-04: $gold,
     stripe-05: $gold,
   ),
-  bumblebee: (font-family: impact,
+  bumblebee: (
+    font-family: impact,
     font-style: normal,
     font-weight: 200,
     background-color: $black,
-    background-image: linear-gradient(0deg, $gold 25%, black 25%, black 50%, $gold 50%, $gold 75%, black 75%, black 100%),
+    background-image:
+      linear-gradient(0deg, $gold 25%, black 25%, black 50%, $gold 50%, $gold 75%, black 75%, black 100%),
     background-size: 80% 80%,
     options-unchecked-fill: $white,
     text-outline: 2rem solid $black,
@@ -201,7 +206,7 @@ strong {
         }
 
         // Apply styles when the radio button is checked
-        input:checked+&:before {
+        input:checked + &:before {
           background-color: var(--option-color);
           border-color: var(--option-color);
         }
@@ -254,10 +259,6 @@ strong {
     background-image: var(--background-image);
     background-size: var(--background-size);
 
-    h1 {
-      display: none;
-    }
-
     #tomlinism-quote {
       font-size: 4rem;
       color: var(--quote-color);
@@ -265,33 +266,31 @@ strong {
       text-align: center;
       background-color: var(--text-bg-color);
       height: 46dvh;
-      display: flex; 
-    }
 
-
-    .shrink-text {
-      font-size: 1.75rem;
+      &.shrink-text {
+        font-size: 1.75rem;
+      }
     }
   }
 
-  .stripe-05 {
-    @include stripe-styles(100%, 100%);
-    background-color: var(--stripe-04);
-    border: var(--stripes-outline);
-    grid-area: stripe-05;
-  }
+    .stripe-05 {
+      @include stripe-styles(100%, 100%);
+      background-color: var(--stripe-04);
+      border: var(--stripes-outline);
+      grid-area: stripe-05;
+    }
 
-  .stripe-06 {
-    @include stripe-styles(100%, 100%);
-    background-color: var(--stripe-05);
-    border: var(--stripes-outline);
-    grid-area: stripe-06;
-  }
+    .stripe-06 {
+      @include stripe-styles(100%, 100%);
+      background-color: var(--stripe-05);
+      border: var(--stripes-outline);
+      grid-area: stripe-06;
+    }
 
-  .stripe-07 {
-    @include stripe-styles(100%, 100%);
-    background-color: var(--background-color);
-    border: var(--stripes-outline);
-    grid-area: stripe-07;
+    .stripe-07 {
+      @include stripe-styles(100%, 100%);
+      background-color: var(--background-color);
+      border: var(--stripes-outline);
+      grid-area: stripe-07;
+    }
   }
-}

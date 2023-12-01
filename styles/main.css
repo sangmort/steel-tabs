@@ -228,9 +228,6 @@ input:checked + #content-wrapper .stripe-01 .options label:before {
   background-image: var(--background-image);
   background-size: var(--background-size);
 }
-#content-wrapper .stripe-04 h1 {
-  display: none;
-}
 #content-wrapper .stripe-04 #tomlinism-quote {
   font-size: 4rem;
   color: var(--quote-color);
@@ -238,9 +235,8 @@ input:checked + #content-wrapper .stripe-01 .options label:before {
   text-align: center;
   background-color: var(--text-bg-color);
   height: 46dvh;
-  display: flex;
 }
-#content-wrapper .stripe-04 .shrink-text {
+#content-wrapper .stripe-04 #tomlinism-quote.shrink-text {
   font-size: 1.75rem;
 }
 #content-wrapper .stripe-05 {
