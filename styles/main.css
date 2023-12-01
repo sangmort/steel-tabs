@@ -11,12 +11,16 @@
   --quote-color: #101820;
   --option-color: #efefef;
   --stripes: none;
-  --stripes-outline: 0.5rem solid#101820;
-  --stripe-01: #ffb612;
-  --stripe-02: #efefef;
-  --stripe-03: #ffb612;
-  --stripe-04: #efefef;
-  --stripe-05: #ffb612;
+  --stripes-outline: 0.75rem solid#101820;
+  --stripe-01: #101820;
+  --stripe-02: #ffb612;
+  --stripe-03: #efefef;
+  --stripe-04: #ffb612;
+  --stripe-05: #efefef;
+  --stripe-06: #ffb612;
+  --stripe-07: #101820;
+  --jersey-side-color: #101820;
+  --jersey-width: 100dvw;
 }
 
 .theme-away {
@@ -32,12 +36,16 @@
   --quote-color: #101820;
   --option-color: #101820;
   --stripes: none;
-  --stripes-outline: 0.5rem solid#101820;
-  --stripe-01: #ffb612;
-  --stripe-02: #efefef;
-  --stripe-03: #ffb612;
-  --stripe-04: #efefef;
-  --stripe-05: #ffb612;
+  --stripes-outline: 0.75rem solid#101820;
+  --stripe-01: #efefef;
+  --stripe-02: #ffb612;
+  --stripe-03: #efefef;
+  --stripe-04: #ffb612;
+  --stripe-05: #efefef;
+  --stripe-06: #ffb612;
+  --stripe-07: #efefef;
+  --jersey-side-color: #efefef;
+  --jersey-width: 100dvw;
 }
 
 .theme-color-rush {
@@ -53,12 +61,16 @@
   --quote-color: #101820;
   --option-color: #ffb612;
   --stripes: none;
-  --stripes-outline: 0.5rem solid#101820;
-  --stripe-01: #ffb612;
+  --stripes-outline: 0.75rem solid#101820;
+  --stripe-01: #101820;
   --stripe-02: #ffb612;
   --stripe-03: #ffb612;
   --stripe-04: #ffb612;
   --stripe-05: #ffb612;
+  --stripe-06: #ffb612;
+  --stripe-07: #101820;
+  --jersey-side-color: #101820;
+  --jersey-width: 100dvw;
 }
 
 .theme-bumblebee {
@@ -66,20 +78,24 @@
   --font-style: normal;
   --font-weight: 200;
   --background-color: #ffb612;
-  --background-image: linear-gradient(0deg, #ffb612 25%, black 25%, black 50%, #ffb612 50%, #ffb612 75%, black 75%, black 100%);
-  --background-size: 80% 80%;
+  --background-image: linear-gradient(0deg, #101820 16.67%, #ffb612 16.67%, #ffb612 33.33%, #101820 33.33%, #101820 50%, #101820 50%, #101820 66.67%, #ffb612 66.67%, #ffb612 83.33%, #101820 83.33%, #101820 100%);
+  --background-size: 80dvh 80dvh;
   --options-unchecked-fill: #efefef;
   --text-outline: 2rem solid #101820;
   --text-bg-color: #efefef;
   --quote-color: #101820;
   --option-color: #101820;
   --stripes: block;
-  --stripes-outline: 0.5rem solid#101820;
-  --stripe-01: #101820;
-  --stripe-02: #ffb612;
+  --stripes-outline: 0 solid #101820;
+  --stripe-01: #ffb612;
+  --stripe-02: #101820;
   --stripe-03: #ffb612;
-  --stripe-04: #ffb612;
-  --stripe-05: #101820;
+  --stripe-04: #101820;
+  --stripe-05: #ffb612;
+  --stripe-06: #101820;
+  --stripe-07: #ffb612;
+  --jersey-side-color: #101820;
+  --jersey-width: 94dvw;
 }
 
 body {
@@ -87,7 +103,7 @@ body {
   font-style: var(--font-style);
   letter-spacing: 1px;
   font-weight: var(--font-weight);
-  background-color: var(--background-color);
+  background-color: var(--jersey-side-color);
   color: var(--quote-color);
   font-size: 20px;
   overflow: hidden;
@@ -126,19 +142,21 @@ strong {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr 4fr 1fr 1fr 1fr;
   gap: 0px 0px;
-  width: 100dvw;
+  width: var(--jersey-width);
+  margin: 0 auto;
   height: 100dvh;
   grid-template-areas: "stripe-01" "stripe-02" "stripe-03" "stripe-04" "stripe-05" "stripe-06" "stripe-07";
 }
 #content-wrapper .stripe-01 {
   height: 100%;
   width: 100%;
-  background-color: var(--background-color);
+  background-color: var(--stripe-01);
   border: var(--stripes-outline);
   grid-area: stripe-01;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  height: 10dvh;
 }
 #content-wrapper .stripe-01 .options {
   display: flex;
@@ -196,21 +214,23 @@ input:checked + #content-wrapper .stripe-01 .options label:before {
 #content-wrapper .stripe-02 {
   height: 100%;
   width: 100%;
-  background-color: var(--stripe-01);
+  background-color: var(--stripe-02);
   border: var(--stripes-outline);
   grid-area: stripe-02;
+  height: 10dvh;
 }
 #content-wrapper .stripe-03 {
   height: 100%;
   width: 100%;
-  background-color: var(--stripe-02);
+  background-color: var(--stripe-03);
   border: var(--stripes-outline);
   grid-area: stripe-03;
+  height: 10dvh;
 }
 #content-wrapper .stripe-04 {
   height: 100%;
   width: 100%;
-  background-color: var(--stripe-03);
+  background-color: var(--stripe-04);
   border: var(--stripes-outline);
   grid-area: stripe-04;
   display: flex;
@@ -219,6 +239,8 @@ input:checked + #content-wrapper .stripe-01 .options label:before {
   background-size: var(--background-size);
   flex-wrap: wrap;
   justify-content: center;
+  height: 40dvh;
+  overflow: hidden;
 }
 #content-wrapper .stripe-04 #tomlinism-quote-container {
   display: flex;
@@ -240,21 +262,24 @@ input:checked + #content-wrapper .stripe-01 .options label:before {
 #content-wrapper .stripe-05 {
   height: 100%;
   width: 100%;
-  background-color: var(--stripe-04);
+  background-color: var(--stripe-05);
   border: var(--stripes-outline);
   grid-area: stripe-05;
+  height: 10dvh;
 }
 #content-wrapper .stripe-06 {
   height: 100%;
   width: 100%;
-  background-color: var(--stripe-05);
+  background-color: var(--stripe-06);
   border: var(--stripes-outline);
   grid-area: stripe-06;
+  height: 10dvh;
 }
 #content-wrapper .stripe-07 {
   height: 100%;
   width: 100%;
-  background-color: var(--background-color);
+  background-color: var(--stripe-07);
   border: var(--stripes-outline);
   grid-area: stripe-07;
+  height: 10dvh;
 }/*# sourceMappingURL=main.css.map */

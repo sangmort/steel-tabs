@@ -7,7 +7,10 @@ $white: #efefef;
 
 $h1-size: 3rem;
 $p-size: 20px;
-$stripe-border-width: 0.5rem solid;
+$stripe-border-width: 0.75rem solid;
+$bgsize: 80dvh;
+$sm-stripe-height: 10dvh;
+$lg-stripe-height: 40dvh;
 
 $themes: (
   home: (
@@ -24,11 +27,15 @@ $themes: (
     option-color: $white,
     stripes: none,
     stripes-outline: $stripe-border-width + $black,
-    stripe-01: $gold,
-    stripe-02: $white,
-    stripe-03: $gold,
-    stripe-04: $white,
-    stripe-05: $gold,
+    stripe-01: $black,
+    stripe-02: $gold,
+    stripe-03: $white,
+    stripe-04: $gold,
+    stripe-05: $white,
+    stripe-06: $gold,
+    stripe-07: $black,
+    jersey-side-color: $black,
+    jersey-width: 100dvw,
   ),
   away: (
     font-family: Verdana,
@@ -44,11 +51,15 @@ $themes: (
     option-color: $black,
     stripes: none,
     stripes-outline: $stripe-border-width + $black,
-    stripe-01: $gold,
-    stripe-02: $white,
-    stripe-03: $gold,
-    stripe-04: $white,
-    stripe-05: $gold,
+    stripe-01: $white,
+    stripe-02: $gold,
+    stripe-03: $white,
+    stripe-04: $gold,
+    stripe-05: $white,
+    stripe-06: $gold,
+    stripe-07: $white,
+    jersey-side-color: $white,
+    jersey-width: 100dvw,
   ),
   color-rush: (
     font-family: impact,
@@ -64,11 +75,15 @@ $themes: (
     option-color: $gold,
     stripes: none,
     stripes-outline: $stripe-border-width + $black,
-    stripe-01: $gold,
+    stripe-01: $black,
     stripe-02: $gold,
     stripe-03: $gold,
     stripe-04: $gold,
     stripe-05: $gold,
+    stripe-06: $gold,
+    stripe-07: $black,
+    jersey-side-color: $black,
+    jersey-width: 100dvw,
   ),
   bumblebee: (
     font-family: impact,
@@ -76,20 +91,37 @@ $themes: (
     font-weight: 200,
     background-color: $gold,
     background-image:
-      linear-gradient(0deg, $gold 25%, black 25%, black 50%, $gold 50%, $gold 75%, black 75%, black 100%),
-    background-size: 80% 80%,
+      linear-gradient(
+        0deg,
+        $black 16.67%,
+        $gold 16.67%,
+        $gold 33.33%,
+        $black 33.33%,
+        $black 50%,
+        $black 50%,
+        $black 66.67%,
+        $gold 66.67%,
+        $gold 83.33%,
+        $black 83.33%,
+        $black 100%
+      ),
+    background-size: $bgsize $bgsize,
     options-unchecked-fill: $white,
     text-outline: 2rem solid $black,
     text-bg-color: $white,
     quote-color: $black,
     option-color: $black,
     stripes: block,
-    stripes-outline: $stripe-border-width + $black,
-    stripe-01: $black,
-    stripe-02: $gold,
+    stripes-outline: 0 solid $black,
+    stripe-01: $gold,
+    stripe-02: $black,
     stripe-03: $gold,
-    stripe-04: $gold,
-    stripe-05: $black,
+    stripe-04: $black,
+    stripe-05: $gold,
+    stripe-06: $black,
+    stripe-07: $gold,
+    jersey-side-color: $black,
+    jersey-width: 94dvw,
   ),
 );
 
@@ -106,7 +138,7 @@ body {
   font-style: var(--font-style);
   letter-spacing: 1px;
   font-weight: var(--font-weight);
-  background-color: var(--background-color);
+  background-color: var(--jersey-side-color);
   // background-image: var(--background-image);
   // background-size: var(--background-size);
   color: var(--quote-color);
@@ -135,7 +167,8 @@ strong {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr 4fr 1fr 1fr 1fr;
   gap: 0px 0px;
-  width: 100dvw;
+  width: var(--jersey-width);
+  margin: 0 auto;
   height: 100dvh;
   grid-template-areas:
     "stripe-01"
@@ -148,12 +181,13 @@ strong {
 
   .stripe-01 {
     @include stripe-styles(100%, 100%);
-    background-color: var(--background-color);
+    background-color: var(--stripe-01);
     border: var(--stripes-outline);
     grid-area: stripe-01;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    height: $sm-stripe-height;
 
     // Apply styles to theme radio buttons and labels
     .options {
@@ -226,21 +260,25 @@ strong {
 
   .stripe-02 {
     @include stripe-styles(100%, 100%);
-    background-color: var(--stripe-01);
+    background-color: var(--stripe-02);
     border: var(--stripes-outline);
     grid-area: stripe-02;
+    height: $sm-stripe-height;
+
   }
 
   .stripe-03 {
     @include stripe-styles(100%, 100%);
-    background-color: var(--stripe-02);
+    background-color: var(--stripe-03);
     border: var(--stripes-outline);
     grid-area: stripe-03;
+    height: $sm-stripe-height;
+
   }
 
   .stripe-04 {
     @include stripe-styles(100%, 100%);
-    background-color: var(--stripe-03);
+    background-color: var(--stripe-04);
     border: var(--stripes-outline);
     grid-area: stripe-04;
     display: flex;
@@ -249,6 +287,9 @@ strong {
     background-size: var(--background-size);
     flex-wrap: wrap;
     justify-content: center;
+    height: $lg-stripe-height;
+    overflow: hidden;
+
 
     #tomlinism-quote-container {
       display: flex;
@@ -274,22 +315,28 @@ strong {
 
   .stripe-05 {
     @include stripe-styles(100%, 100%);
-    background-color: var(--stripe-04);
+    background-color: var(--stripe-05);
     border: var(--stripes-outline);
     grid-area: stripe-05;
+    height: $sm-stripe-height;
+
   }
 
   .stripe-06 {
     @include stripe-styles(100%, 100%);
-    background-color: var(--stripe-05);
+    background-color: var(--stripe-06);
     border: var(--stripes-outline);
     grid-area: stripe-06;
+    height: $sm-stripe-height;
+
   }
 
   .stripe-07 {
     @include stripe-styles(100%, 100%);
-    background-color: var(--background-color);
+    background-color: var(--stripe-07);
     border: var(--stripes-outline);
     grid-area: stripe-07;
+    height: $sm-stripe-height;
+
   }
 }
