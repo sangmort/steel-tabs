@@ -65,7 +65,7 @@
   --font-family: impact;
   --font-style: normal;
   --font-weight: 200;
-  --background-color: #101820;
+  --background-color: #ffb612;
   --background-image: linear-gradient(0deg, #ffb612 25%, black 25%, black 50%, #ffb612 50%, #ffb612 75%, black 75%, black 100%);
   --background-size: 80% 80%;
   --options-unchecked-fill: #efefef;
@@ -223,20 +223,27 @@ input:checked + #content-wrapper .stripe-01 .options label:before {
   border: var(--stripes-outline);
   grid-area: stripe-04;
   display: flex;
-  justify-content: center;
   align-items: center;
   background-image: var(--background-image);
   background-size: var(--background-size);
+  flex-wrap: wrap;
+  justify-content: center;
 }
-#content-wrapper .stripe-04 #tomlinism-quote {
-  font-size: 4rem;
+#content-wrapper .stripe-04 #tomlinism-quote-container {
+  display: flex;
   color: var(--quote-color);
+  background-color: var(--text-bg-color);
+  border: var(--text-outline);
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+#content-wrapper .stripe-04 #tomlinism-quote-container #tomlinism-quote {
+  font-size: 4rem;
   width: 70dvw;
   text-align: center;
-  background-color: var(--text-bg-color);
-  height: 46dvh;
 }
-#content-wrapper .stripe-04 #tomlinism-quote.shrink-text {
+#content-wrapper .stripe-04 #tomlinism-quote-container #tomlinism-quote.shrink-text {
   font-size: 1.75rem;
 }
 #content-wrapper .stripe-05 {

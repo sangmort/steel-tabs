@@ -74,7 +74,7 @@ $themes: (
     font-family: impact,
     font-style: normal,
     font-weight: 200,
-    background-color: $black,
+    background-color: $gold,
     background-image:
       linear-gradient(0deg, $gold 25%, black 25%, black 50%, $gold 50%, $gold 75%, black 75%, black 100%),
     background-size: 80% 80%,
@@ -253,44 +253,52 @@ strong {
     border: var(--stripes-outline);
     grid-area: stripe-04;
     display: flex;
-    justify-content: center;
     align-items: center;
-
     background-image: var(--background-image);
     background-size: var(--background-size);
+    flex-wrap: wrap;
+    justify-content: center;
 
-    #tomlinism-quote {
-      font-size: 4rem;
+    #tomlinism-quote-container {
+      display: flex;
       color: var(--quote-color);
-      width: 70dvw;
-      text-align: center;
       background-color: var(--text-bg-color);
-      height: 46dvh;
+      border: var(--text-outline);
+      height: 100%;
+      justify-content: center;
+      align-items: center;
 
-      &.shrink-text {
-        font-size: 1.75rem;
+      #tomlinism-quote {
+        font-size: 4rem;
+
+        width: 70dvw;
+        text-align: center;
+
+        &.shrink-text {
+          font-size: 1.75rem;
+        }
       }
     }
   }
 
-    .stripe-05 {
-      @include stripe-styles(100%, 100%);
-      background-color: var(--stripe-04);
-      border: var(--stripes-outline);
-      grid-area: stripe-05;
-    }
-
-    .stripe-06 {
-      @include stripe-styles(100%, 100%);
-      background-color: var(--stripe-05);
-      border: var(--stripes-outline);
-      grid-area: stripe-06;
-    }
-
-    .stripe-07 {
-      @include stripe-styles(100%, 100%);
-      background-color: var(--background-color);
-      border: var(--stripes-outline);
-      grid-area: stripe-07;
-    }
+  .stripe-05 {
+    @include stripe-styles(100%, 100%);
+    background-color: var(--stripe-04);
+    border: var(--stripes-outline);
+    grid-area: stripe-05;
   }
+
+  .stripe-06 {
+    @include stripe-styles(100%, 100%);
+    background-color: var(--stripe-05);
+    border: var(--stripes-outline);
+    grid-area: stripe-06;
+  }
+
+  .stripe-07 {
+    @include stripe-styles(100%, 100%);
+    background-color: var(--background-color);
+    border: var(--stripes-outline);
+    grid-area: stripe-07;
+  }
+}
