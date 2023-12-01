@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Display content & adjust delay
     document.querySelector(".content").style.display = "block";
-  }, 200); 
+  }, 100); 
 });
 
 // Randomizer
