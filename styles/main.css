@@ -312,15 +312,13 @@ strong {
 #content-wrapper .stripe-01 .options {
   display: flex;
   justify-content: space-around;
-  outline: var(--text-outline);
-  background-color: var(--text-bg-color);
 }
 #content-wrapper .stripe-01 .options label {
   display: flex;
   position: relative;
   padding: 0 1.75rem 0 1rem;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: var(--option-color);
   text-transform: uppercase;
   opacity: 0.85;
