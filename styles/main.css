@@ -21,7 +21,7 @@
   --stripe-07: #101820;
   --jersey-side-color: #101820;
   --jersey-width: 100dvw;
-  --loader-bg: rgba(16, 24, 32, 0.7960784314);
+  --loader-bg: #101820;
 }
 
 .theme-away {
@@ -47,7 +47,7 @@
   --stripe-07: #efefef;
   --jersey-side-color: #efefef;
   --jersey-width: 100dvw;
-  --loader-bg: rgba(239, 239, 239, 0.7960784314);
+  --loader-bg: #efefef;
 }
 
 .theme-color-rush {
@@ -73,7 +73,7 @@
   --stripe-07: #101820;
   --jersey-side-color: #101820;
   --jersey-width: 100dvw;
-  --loader-bg: rgba(16, 24, 32, 0.7960784314);
+  --loader-bg: #101820;
 }
 
 .theme-bumblebee {
@@ -99,7 +99,7 @@
   --stripe-07: #ffb612;
   --jersey-side-color: #101820;
   --jersey-width: 94dvw;
-  --loader-bg: rgba(16, 24, 32, 0.7960784314);
+  --loader-bg: #101820;
 }
 
 body {
@@ -132,6 +132,9 @@ body {
   align-content: center;
   justify-content: center;
 }
+.loader-wrapper.fade-out {
+  animation: fadeOut 500ms forwards ease-out;
+}
 .loader-wrapper .loader1 {
   width: 48px;
   height: 48px;
@@ -147,7 +150,7 @@ body {
   top: 60px;
   left: 0;
   border-radius: 50%;
-  animation: shadow324 0.25s linear infinite;
+  animation: animateLoaderShadow 0.25s linear infinite;
 }
 .loader-wrapper .loader1:after {
   content: "";
@@ -158,7 +161,7 @@ body {
   top: 0;
   left: 0;
   border-radius: 4px;
-  animation: jump7456 0.25s linear infinite;
+  animation: animateLoader 0.25s linear infinite;
 }
 .loader-wrapper .loader2 {
   width: 48px;
@@ -175,7 +178,7 @@ body {
   top: 60px;
   left: 0;
   border-radius: 50%;
-  animation: shadow324 0.25s linear infinite;
+  animation: animateLoaderShadow 0.25s linear infinite;
 }
 .loader-wrapper .loader2:after {
   content: "";
@@ -186,7 +189,7 @@ body {
   top: 0;
   left: 0;
   border-radius: 4px;
-  animation: jump7456 0.25s linear infinite;
+  animation: animateLoader 0.25s linear infinite;
 }
 .loader-wrapper .loader3 {
   width: 48px;
@@ -203,7 +206,7 @@ body {
   top: 60px;
   left: 0;
   border-radius: 50%;
-  animation: shadow324 0.25s linear infinite;
+  animation: animateLoaderShadow 0.25s linear infinite;
 }
 .loader-wrapper .loader3:after {
   content: "";
@@ -214,10 +217,10 @@ body {
   top: 0;
   left: 0;
   border-radius: 4px;
-  animation: jump7456 0.25s linear infinite;
+  animation: animateLoader 0.25s linear infinite;
 }
 
-@keyframes jump7456 {
+@keyframes animateLoader {
   15% {
     border-bottom-right-radius: 3px;
   }
@@ -235,12 +238,30 @@ body {
     transform: translateY(0) rotate(90deg);
   }
 }
-@keyframes shadow324 {
+@keyframes animateLoaderShadow {
   0%, 100% {
     transform: scale(1, 1);
   }
   50% {
     transform: scale(1.2, 1);
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
   }
 }
 h1 {

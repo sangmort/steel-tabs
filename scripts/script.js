@@ -1,12 +1,7 @@
+// Adds preloader with animations in .fade-out SCSS
 document.addEventListener("DOMContentLoaded", function () {
-  // Simulate a delay (you can replace this with your actual loading logic)
-  setTimeout(function () {
-    // Hide the loader
-    document.querySelector(".loader-wrapper").style.display = "none";
-
-    // Display content & adjust delay
-    document.querySelector(".content").style.display = "block";
-  }, 100); 
+  let loaderWrapper = document.querySelector(".loader-wrapper");
+  loaderWrapper.classList.add("fade-out");
 });
 
 // Randomizer
