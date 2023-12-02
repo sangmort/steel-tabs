@@ -81,8 +81,8 @@
   --font-style: normal;
   --font-weight: 200;
   --background-color: #ffb612;
-  --background-image: linear-gradient(0deg, #101820 16.67%, #ffb612 16.67%, #ffb612 33.33%, #101820 33.33%, #101820 50%, #101820 50%, #101820 66.67%, #ffb612 66.67%, #ffb612 83.33%, #101820 83.33%, #101820 100%);
-  --background-size: 80dvh 80dvh;
+  --background-image: linear-gradient(0deg, #101820 25%, #ffb612 25%, #ffb612 50%, #101820 50%, #101820 75%, #ffb612 75%, #ffb612 100%);
+  --background-size: 54dvh 54dvh;
   --options-unchecked-fill: #efefef;
   --text-outline: 2rem solid #101820;
   --text-bg-color: #efefef;

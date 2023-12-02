@@ -8,7 +8,7 @@ $white: #efefef;
 $h1-size: 3rem;
 $p-size: 20px;
 $stripe-border-width: 0.75rem solid;
-$bgsize: 80dvh;
+$bgsize: 54dvh;
 $sm-stripe-height: 8dvh;
 $md-stripe-height: 14dvh;
 $lg-stripe-height: 40dvh;
@@ -98,20 +98,7 @@ $themes: (
     font-weight: 200,
     background-color: $gold,
     background-image:
-      linear-gradient(
-        0deg,
-        $black 16.67%,
-        $gold 16.67%,
-        $gold 33.33%,
-        $black 33.33%,
-        $black 50%,
-        $black 50%,
-        $black 66.67%,
-        $gold 66.67%,
-        $gold 83.33%,
-        $black 83.33%,
-        $black 100%
-      ),
+    linear-gradient(0deg, $black 25%, $gold 25%, $gold 50%, $black 50%, $black 75%, $gold 75%, $gold 100%),
     background-size: $bgsize $bgsize,
     options-unchecked-fill: $white,
     text-outline: 2rem solid $black,
