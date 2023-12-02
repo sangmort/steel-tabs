@@ -147,15 +147,9 @@ body {
   letter-spacing: 1px;
   font-weight: var(--font-weight);
   background-color: var(--jersey-side-color);
-  // background-image: var(--background-image);
-  // background-size: var(--background-size);
   color: var(--quote-color);
   font-size: $p-size;
   overflow: hidden;
-}
-
-.content {
-  display: none;
 }
 
 .loader-wrapper {

@@ -113,10 +113,6 @@ body {
   overflow: hidden;
 }
 
-.content {
-  display: none;
-}
-
 .loader-wrapper {
   position: fixed;
   grid-template-columns: 0.125fr 0.125fr 0.125fr;
