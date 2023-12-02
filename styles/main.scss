@@ -9,7 +9,8 @@ $h1-size: 3rem;
 $p-size: 20px;
 $stripe-border-width: 0.75rem solid;
 $bgsize: 80dvh;
-$sm-stripe-height: 10dvh;
+$sm-stripe-height: 8dvh;
+$md-stripe-height: 14dvh;
 $lg-stripe-height: 40dvh;
 $loader-size: 48px;
 
@@ -341,7 +342,7 @@ strong {
 #content-wrapper {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 4fr 1fr 1fr 1fr;
+  grid-template-rows: 2fr 1fr 1fr 4fr 1fr 1fr 2fr;
   gap: 0px 0px;
   width: var(--jersey-width);
   margin: 0 auto;
@@ -363,7 +364,7 @@ strong {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: $sm-stripe-height;
+    height: $md-stripe-height;
 
     // Apply styles to theme radio buttons and labels
     .options {
@@ -507,6 +508,6 @@ strong {
     background-color: var(--stripe-07);
     border: var(--stripes-outline);
     grid-area: stripe-07;
-    height: $sm-stripe-height;
+    height: $md-stripe-height;
   }
 }
