@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'College Block';
+  src: url('/fonts/College-Block.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'LeagueGothic Italic';
+  src: url('/fonts/LeagueGothic-Italic.woff') format('woff');
+}
+
+
 $gold: #ffb612;
 $black: #101820;
 $red: #c60c30;
@@ -17,9 +28,15 @@ $loader-size: 48px;
 
 $themes: (
   home: (
-    font-family: Verdana,
+    font-family: 'LeagueGothic Italic',
     font-style: italic,
-    font-weight: 500,
+    font-weight: 200,
+    font-weight-strong: 600,
+    font-size-label: 1.5rem,
+    font-size-quote: 6rem,
+    font-size-shrink: 4.5rem,
+    line-height-qoute: 5.5rem,
+    line-height-shrink: 4.5rem,
     background-color: $black,
     background-image: none,
     background-size: auto,
@@ -42,9 +59,15 @@ $themes: (
     loader-bg: #101820,
   ),
   away: (
-    font-family: Verdana,
+    font-family: 'LeagueGothic Italic',
     font-style: italic,
-    font-weight: 500,
+    font-weight: 200,
+    font-weight-strong: 600,
+    font-size-label: 1.5rem,
+    font-size-quote: 6rem,
+    font-size-shrink: 4.5rem,
+    line-height-qoute: 5.5rem,
+    line-height-shrink: 4.5rem,
     background-color: $white,
     background-image: none,
     background-size: auto,
@@ -67,9 +90,15 @@ $themes: (
     loader-bg: #efefef,
   ),
   color-rush: (
-    font-family: impact,
+    font-family: 'College Block',
     font-style: normal,
-    font-weight: 200,
+    font-weight: 500,
+    font-weight-strong: 600,
+    font-size-label: 1.25rem,
+    font-size-shrink: 4rem,
+    font-size-quote: 5rem,
+    line-height-qoute: 5rem,
+    line-height-shrink: 4.25rem,
     background-color: $black,
     background-image: none,
     background-size: auto,
@@ -93,9 +122,15 @@ $themes: (
 
   ),
   bumblebee: (
-    font-family: impact,
+    font-family: 'College Block',
     font-style: normal,
     font-weight: 200,
+    font-weight-strong: 600,
+    font-size-label: 1.25rem,
+    font-size-shrink: 3.25rem,
+    font-size-quote: 5.125rem,
+    line-height-qoute: 5rem,
+    line-height-shrink: 3.5rem,
     background-color: $gold,
     background-image:
     linear-gradient(0deg, $black 25%, $gold 25%, $gold 50%, $black 50%, $black 75%, $gold 75%, $gold 100%),
@@ -129,15 +164,17 @@ $themes: (
   }
 }
 
+
 body {
   font-family: var(--font-family);
   font-style: var(--font-style);
-  letter-spacing: 1px;
+  letter-spacing: .125ex;
   font-weight: var(--font-weight);
   background-color: var(--jersey-side-color);
   color: var(--quote-color);
   font-size: $p-size;
   overflow: hidden;
+  text-transform: uppercase;
 }
 
 .loader-wrapper {
@@ -318,7 +355,7 @@ body {
 }
 
 strong {
-  font-weight: bolder;
+  font-weight: var(--font-weight-strong);
 }
 
 @mixin stripe-styles($height, $width) {
@@ -363,7 +400,7 @@ strong {
         position: relative;
         padding: 0 1.75rem 0 1rem;
         cursor: pointer;
-        font-size: 1.25rem;
+        font-size: var(--font-size-label);
         color: var(--option-color);
         text-transform: uppercase;
         opacity: 0.85;
@@ -458,15 +495,17 @@ strong {
       height: 100%;
       justify-content: center;
       align-items: center;
+      padding: 3rem;
 
       #tomlinism-quote {
-        font-size: 4rem;
-
-        width: 70dvw;
+        font-size: var(--font-size-quote);
+        line-height: var(--line-height-qoute);
+        width: 75dvw;
         text-align: center;
 
         &.shrink-text {
-          font-size: 3rem;
+          font-size: var(--font-size-shrink);
+          line-height: var(--line-height-shrink);
         }
       }
     }

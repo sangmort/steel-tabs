@@ -1,7 +1,21 @@
+@font-face {
+  font-family: "College Block";
+  src: url("/fonts/College-Block.woff") format("woff");
+}
+@font-face {
+  font-family: "LeagueGothic Italic";
+  src: url("/fonts/LeagueGothic-Italic.woff") format("woff");
+}
 .theme-home {
-  --font-family: Verdana;
+  --font-family: "LeagueGothic Italic";
   --font-style: italic;
-  --font-weight: 500;
+  --font-weight: 200;
+  --font-weight-strong: 600;
+  --font-size-label: 1.5rem;
+  --font-size-quote: 6rem;
+  --font-size-shrink: 4.5rem;
+  --line-height-qoute: 5.5rem;
+  --line-height-shrink: 4.5rem;
   --background-color: #101820;
   --background-image: none;
   --background-size: auto;
@@ -25,9 +39,15 @@
 }
 
 .theme-away {
-  --font-family: Verdana;
+  --font-family: "LeagueGothic Italic";
   --font-style: italic;
-  --font-weight: 500;
+  --font-weight: 200;
+  --font-weight-strong: 600;
+  --font-size-label: 1.5rem;
+  --font-size-quote: 6rem;
+  --font-size-shrink: 4.5rem;
+  --line-height-qoute: 5.5rem;
+  --line-height-shrink: 4.5rem;
   --background-color: #efefef;
   --background-image: none;
   --background-size: auto;
@@ -51,9 +71,15 @@
 }
 
 .theme-color-rush {
-  --font-family: impact;
+  --font-family: "College Block";
   --font-style: normal;
-  --font-weight: 200;
+  --font-weight: 500;
+  --font-weight-strong: 600;
+  --font-size-label: 1.25rem;
+  --font-size-shrink: 4rem;
+  --font-size-quote: 5rem;
+  --line-height-qoute: 5rem;
+  --line-height-shrink: 4.25rem;
   --background-color: #101820;
   --background-image: none;
   --background-size: auto;
@@ -77,9 +103,15 @@
 }
 
 .theme-bumblebee {
-  --font-family: impact;
+  --font-family: "College Block";
   --font-style: normal;
   --font-weight: 200;
+  --font-weight-strong: 600;
+  --font-size-label: 1.25rem;
+  --font-size-shrink: 3.25rem;
+  --font-size-quote: 5.125rem;
+  --line-height-qoute: 5rem;
+  --line-height-shrink: 3.5rem;
   --background-color: #ffb612;
   --background-image: linear-gradient(0deg, #101820 25%, #ffb612 25%, #ffb612 50%, #101820 50%, #101820 75%, #ffb612 75%, #ffb612 100%);
   --background-size: 54dvh 54dvh;
@@ -105,12 +137,13 @@
 body {
   font-family: var(--font-family);
   font-style: var(--font-style);
-  letter-spacing: 1px;
+  letter-spacing: 0.125ex;
   font-weight: var(--font-weight);
   background-color: var(--jersey-side-color);
   color: var(--quote-color);
   font-size: 20px;
   overflow: hidden;
+  text-transform: uppercase;
 }
 
 .loader-wrapper {
@@ -285,7 +318,7 @@ h6 {
 }
 
 strong {
-  font-weight: bolder;
+  font-weight: var(--font-weight-strong);
 }
 
 #content-wrapper {
@@ -318,7 +351,7 @@ strong {
   position: relative;
   padding: 0 1.75rem 0 1rem;
   cursor: pointer;
-  font-size: 1.25rem;
+  font-size: var(--font-size-label);
   color: var(--option-color);
   text-transform: uppercase;
   opacity: 0.85;
@@ -399,14 +432,17 @@ input:checked + #content-wrapper .stripe-01 .options label:before {
   height: 100%;
   justify-content: center;
   align-items: center;
+  padding: 3rem;
 }
 #content-wrapper .stripe-04 #tomlinism-quote-container #tomlinism-quote {
-  font-size: 4rem;
-  width: 70dvw;
+  font-size: var(--font-size-quote);
+  line-height: var(--line-height-qoute);
+  width: 75dvw;
   text-align: center;
 }
 #content-wrapper .stripe-04 #tomlinism-quote-container #tomlinism-quote.shrink-text {
-  font-size: 3rem;
+  font-size: var(--font-size-shrink);
+  line-height: var(--line-height-shrink);
 }
 #content-wrapper .stripe-05 {
   height: 100%;
