@@ -1,3 +1,4 @@
+// Fonts
 @font-face {
   font-family: 'College Block';
   src: url('/fonts/College-Block.woff') format('woff');
@@ -8,7 +9,7 @@
   src: url('/fonts/LeagueGothic-Italic.woff') format('woff');
 }
 
-
+// Colors
 $gold: #ffb612;
 $black: #101820;
 $red: #c60c30;
@@ -16,6 +17,7 @@ $blue: #003087;
 $silver: #a5acaf;
 $white: #efefef;
 
+// Sizes
 $h1-size: 3rem;
 $p-size: 20px;
 $stripe-border-width: 0.75rem solid;
@@ -25,7 +27,7 @@ $md-stripe-height: 14dvh;
 $lg-stripe-height: 40dvh;
 $loader-size: 48px;
 
-
+// Themes
 $themes: (
   home: (
     font-family: 'LeagueGothic Italic',
@@ -156,6 +158,7 @@ $themes: (
   ),
 );
 
+// Use variables in theme
 @each $theme, $map in $themes {
   .theme-#{$theme} {
     @each $key, $value in $map {
@@ -177,6 +180,7 @@ body {
   text-transform: uppercase;
 }
 
+// Preloader
 .loader-wrapper {
   position: fixed;
   grid-template-columns: 0.125fr 0.125fr 0.125fr;
@@ -290,6 +294,7 @@ body {
   }
 }
 
+// Animations for Preloader
 @keyframes animateLoader {
   15% {
     border-bottom-right-radius: 3px;
