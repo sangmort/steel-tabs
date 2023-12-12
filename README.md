@@ -13,7 +13,7 @@ Steel Tabs is a fun project that transforms the new tab experience in Chrome and
 ## INSTALLATION INSTRUCTIONS
 Currently, this extension is only available to load unpacked. 
 
-### How to do it
+### How to Install
 Instructions for Windows PCs.
 
 1. Download or clone this repo into a folder named `steel-tabs`.
