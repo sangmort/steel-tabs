@@ -93,13 +93,14 @@ The current version is the Minimum Viable Product (MVP). Future updates may incl
 
 ... and More to come!
 
+## PRIVACY
+Steel Tabs is designed with privacy in mind. It does not collect nor send any data to any first or third party's. 
+
+Browsing habits, cookies, etc. are not tracked, stored, or shared. 
+
+
 ## TOMLINISM DEFINITION
 
 [^1]: **Tomlinism:** Coined for Mike Tomlin's off-the-cuff, wisdom-filled expressions during pressers. *Example*:
 
 > "There's a fine line between drinking wine and squashing grapes."
-
-## PRIVACY
-Steel Tabs is designed with privacy in mind. It does not collect nor send any data to any first or third party's. 
-
-Browsing habits, cookies, etc. are not tracked, stored, or shared. 
