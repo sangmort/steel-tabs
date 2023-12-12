@@ -1,6 +1,6 @@
 # STEEL TABS - BROWSER EXTENSION DOCUMENTATION
 
-Steel Tabs is a fun project that transforms the new tab experience in Chrome and Firefox. This extension replaces the default "new tab" content with a beautifully styled Steelers-themed page that generates random "Tomlinisms"[^1] – quirky and wisdom-filled quotes by Mike Tomlin, the Head Coach of the Steelers. 
+Steel Tabs is a fun project that transforms the new tab experience in Chrome and Firefox. This extension replaces the default "new tab" content with a beautifully styled Steelers-themed page that generates random "Tomlinisms"[^1]. 
 
 ## FEATURES
 
@@ -10,8 +10,38 @@ Steel Tabs is a fun project that transforms the new tab experience in Chrome and
 - **Responsive Design:** Looks beautiful across different viewport sizes or even when the window is split or shrunk.
 - **Browser Compatibility:** Works seamlessly in Chrome, Firefox, and Edge browsers.
 
-## Installation Instructions
-- Coming soon...
+## INSTALLATION INSTRUCTIONS
+Currently, this extension is only available to load unpacked. 
+
+### How to do it
+Instructions for Windows PCs.
+
+1. Download or clone this repo into a folder named `steel-tabs`.
+
+2. Open your preferred browser.
+
+- **Chrome** 
+ - Extensions -> Manage Extensions
+ - Turn on developer mode *(top right corner)*
+ - Load Unpacked *(top left corner) *
+ - Select steel-tabs folder
+ 
+- **Firefox**
+ - Paste `about:debugging#/runtime/this-firefox` in the URL/Address Bar
+ - Click the `Load Temporary Add-on` button
+ - Select any file in the steel-tabs folder
+
+- **Edge**
+ - Extensions -> Manage Extensions
+ - Turn on developer mode *(left sidebar, in the middle)*
+ - Load Unpacked *(top right corner) *
+ - Select steel-tabs folder
+
+3. Open a new tab
+
+4. Enjoy!
+
+*Note: Only Chromium browsers keep the unpacked extension loaded by default, firefox user will need to reupload the extension if they want to use it after closing the browser at this time.*
 
 ## TECHNICAL DETAILS
 
@@ -60,11 +90,12 @@ The current version is the Minimum Viable Product (MVP). Future updates may incl
 		- [ ] Choose search engine 
 	- [ ] Steelers' Schedule
 		- [ ] Show/Hide the Steelers Schedule
-- [ ] More to come!
+
+... and More to come!
 
 ## TOMLINISM DEFINITION
 
-[^1] **Tomlinism:** Coined for Mike Tomlin's off-the-cuff, wisdom-filled expressions during pressers. *Example*:
+[^1]: **Tomlinism:** Coined for Mike Tomlin's off-the-cuff, wisdom-filled expressions during pressers. *Example*:
 
 > "There's a fine line between drinking wine and squashing grapes."
 
