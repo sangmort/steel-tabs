@@ -20,18 +20,18 @@ Instructions for Windows PCs.
 
 2. Open your preferred browser.
 
-- **Chrome** 
+**Chrome** 
  - Extensions -> Manage Extensions
  - Turn on developer mode *(top right corner)*
  - Load Unpacked *(top left corner) *
  - Select steel-tabs folder
  
-- **Firefox**
+**Firefox**
  - Paste `about:debugging#/runtime/this-firefox` in the URL/Address Bar
  - Click the `Load Temporary Add-on` button
  - Select any file in the steel-tabs folder
 
-- **Edge**
+**Edge**
  - Extensions -> Manage Extensions
  - Turn on developer mode *(left sidebar, in the middle)*
  - Load Unpacked *(top right corner) *
