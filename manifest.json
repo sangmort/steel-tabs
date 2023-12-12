@@ -1,6 +1,6 @@
 {
-  "name": "Tomlinism Tabs - A Mike Tomlin quote to brighten your day.",
-  "description": "Replaces the default new tab with one that shows a randomly generated 'Tomlinism' instead.",
+  "name": "Steel Tabs - A Mike Tomlin quote to brighten your day.",
+  "description": "Replaces the default new tab with one that shows Steeler's themed goodies.",
   "version": "1.0.0",
   "manifest_version": 3,
   "chrome_url_overrides": {
